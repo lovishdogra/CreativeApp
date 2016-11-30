@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CreativeAppDirectorTeacher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkz-Qg-XMe" userLabel="View-Inner">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="sSB-xi-XhA">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="O3O-T5-miO"/>
+                                            <constraint firstAttribute="height" constant="130" id="mlz-EG-1hL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LUX-xk-48E" userLabel="Email">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Vnm-nG-S7d"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q0f-vC-60f" userLabel="Password">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z82-cD-lad" userLabel="LoginButton">
+                                        <color key="backgroundColor" red="0.97647058823529409" green="0.44313725490196076" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="qyo-sW-fW2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dgf-hb-0vj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="LUX-xk-48E" firstAttribute="leading" secondItem="qkz-Qg-XMe" secondAttribute="leading" constant="120" id="7jP-eB-jlQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="LUX-xk-48E" secondAttribute="trailing" constant="120" id="9Ib-Yw-XYd"/>
+                                    <constraint firstItem="q0f-vC-60f" firstAttribute="height" secondItem="LUX-xk-48E" secondAttribute="height" id="G5w-8p-NFL"/>
+                                    <constraint firstItem="sSB-xi-XhA" firstAttribute="top" secondItem="qkz-Qg-XMe" secondAttribute="top" constant="23" id="LKn-Ly-pfH"/>
+                                    <constraint firstItem="sSB-xi-XhA" firstAttribute="centerX" secondItem="qkz-Qg-XMe" secondAttribute="centerX" id="TM0-xf-uAr"/>
+                                    <constraint firstItem="q0f-vC-60f" firstAttribute="top" secondItem="LUX-xk-48E" secondAttribute="bottom" constant="15" id="Taa-Hh-D5n"/>
+                                    <constraint firstItem="Z82-cD-lad" firstAttribute="centerX" secondItem="q0f-vC-60f" secondAttribute="centerX" id="i8I-Zg-4EH"/>
+                                    <constraint firstItem="Z82-cD-lad" firstAttribute="top" secondItem="q0f-vC-60f" secondAttribute="bottom" constant="20" id="kOi-pj-gEc"/>
+                                    <constraint firstItem="q0f-vC-60f" firstAttribute="width" secondItem="LUX-xk-48E" secondAttribute="width" id="kvf-K2-PCs"/>
+                                    <constraint firstItem="LUX-xk-48E" firstAttribute="top" secondItem="sSB-xi-XhA" secondAttribute="bottom" constant="24" id="m0N-co-jUP"/>
+                                    <constraint firstItem="Z82-cD-lad" firstAttribute="width" secondItem="q0f-vC-60f" secondAttribute="width" id="rhF-E3-F14"/>
+                                    <constraint firstItem="q0f-vC-60f" firstAttribute="centerX" secondItem="LUX-xk-48E" secondAttribute="centerX" id="t1e-Pt-yN9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.031372549019607843" green="0.68627450980392157" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qkz-Qg-XMe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4hN-SS-Cce"/>
+                            <constraint firstItem="qkz-Qg-XMe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="555:1024" id="5mb-hS-uZ9"/>
+                            <constraint firstItem="qkz-Qg-XMe" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="369:768" constant="-95" id="fKK-lL-WkP"/>
+                            <constraint firstItem="qkz-Qg-XMe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-142.5" id="tqp-uc-cfF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnLogin" destination="Z82-cD-lad" id="E6U-us-cbn"/>
+                        <outlet property="imageViewSchool" destination="sSB-xi-XhA" id="kOV-mj-MNW"/>
+                        <outlet property="textFieldEmail" destination="LUX-xk-48E" id="kae-5c-rJE"/>
+                        <outlet property="textFieldPassword" destination="q0f-vC-60f" id="TDF-VJ-q3N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58.857979502196187" y="-513.28125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="profile_placeholder" width="101" height="101"/>
+    </resources>
+</document>

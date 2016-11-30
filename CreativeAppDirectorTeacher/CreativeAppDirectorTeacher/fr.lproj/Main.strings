@@ -1,0 +1,9 @@
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "LUX-xk-48E"; */
+"LUX-xk-48E.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Z82-cD-lad"; */
+"Z82-cD-lad.normalTitle" = "Login";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "q0f-vC-60f"; */
+"q0f-vC-60f.placeholder" = "Password";

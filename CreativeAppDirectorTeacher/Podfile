@@ -1,0 +1,17 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'CreativeAppDirectorTeacher' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    pod 'SwiftIconFont'
+    pod 'AFNetworking'
+    pod 'Reachability'
+    pod 'MBProgressHUD'
+    #pod 'ionicons'
+    #pod 'FontAwesomeKit'
+    #pod 'FontAwesomeKit/IonIcons'
+  # Pods for CreativeAppDirectorTeacher
+  #pod 'FontAwesomeKit/IonIcons', :git => 'https://github.com/PrideChung/FontAwesomeKit.git'
+ 
+end
