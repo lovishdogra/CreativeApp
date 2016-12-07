@@ -104,7 +104,12 @@ class Utils: NSObject {
         
     }
     
-    
+    class func returnLocalizedStringForKey (key : String) -> String {
+        
+        let str : String = NSString(string: key.localized(lang: userDef.value(forKey: LANGUAGE) as! String)) as String
+        return str
+        
+    }
     
    
     

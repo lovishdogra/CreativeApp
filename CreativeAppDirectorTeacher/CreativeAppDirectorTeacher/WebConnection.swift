@@ -46,7 +46,7 @@ class WebConnection: NSObject {
                                      completionHandler:@escaping (NSDictionary?) -> Void)
     {
         print(kAPIHost)
-        print(params)
+        print(params ?? "")
         
         let request : URLRequest = AFHTTPRequestSerializer().request(withMethod: "POST", urlString: kAPIHost, parameters: params, error: nil) as URLRequest
         

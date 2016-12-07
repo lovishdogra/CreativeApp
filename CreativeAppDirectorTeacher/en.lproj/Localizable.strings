@@ -6,6 +6,13 @@
   Copyright © 2016 EB. All rights reserved.
 */
 
+//English
 
-"Enter_Email" = "Enter email";
-"Enter_Password" = "Enter password";
+//ViewController : Login View
+"enter_email" = "Class Name/Admin User";
+"enter_password" = "Class Password/Password User";
+"btn_login" = "Login";
+"label_forgot_password" = "Forgot Password?";
+"label_pop_forgot_password" = "Forgot Password";
+"popup_enter_email" = "Enter Email";
+"btn_reset_password" = "Reset Password";

@@ -7,9 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
 
 
 let kAPIHost = "http://54.254.204.73/api/property/feeds"
 let LANGUAGE = "language"
 let userDef = UserDefaults.standard
+
+//Colors
+let colorBlue = UIColor(red:22.0/255.0, green:158.0/255.0, blue:288.0/255.0, alpha:1.0)
+let colorGreen = UIColor(red:0.16, green:0.85, blue:0.76, alpha:1.0)
+let colorOrange = UIColor(red:244.0/255.0, green:89.0/255.0, blue:61.0/255.0, alpha:1.0)
+let colorRed = UIColor(red:0.98, green:0.44, blue:0.30, alpha:1.0)
+let colorBackgroundGrey = UIColor(red: 246.0/255.0, green: 246.0/255.0, blue: 246.0/255.0, alpha: 1.0)
+let colorNavBarBlue = UIColor(red: 61.0/255.0, green: 160.0/255.0, blue: 195.0/255.0, alpha: 1.0)

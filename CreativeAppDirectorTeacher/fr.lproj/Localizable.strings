@@ -6,5 +6,14 @@
   Copyright © 2016 EB. All rights reserved.
 */
 
-"Enter_Email" = "Enter email french";
-"Enter_Password" = "Enter password french";
+//French
+
+//ViewController : Login View
+"enter_email" = "Class Name/Admin User French";
+"enter_password" = "Class Password/Password User French";
+"btn_login" = "Login French";
+"label_forgot_password" = "Forgot Password french?";
+"label_pop_forgot_password" = "Forgot Password french";
+"popup_enter_email" = "Enter Email French" ;
+"btn_reset_password" = "Reset Password French";
+
