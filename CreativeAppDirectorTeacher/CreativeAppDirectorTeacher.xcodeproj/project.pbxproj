@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212976D81DFA836E00097A77 /* TeacherDailyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212976D71DFA836E00097A77 /* TeacherDailyReportViewController.swift */; };
 		215A94821DF940ED00947A78 /* TeacherCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A94811DF940ED00947A78 /* TeacherCheckinViewController.swift */; };
 		512A27451DE9892200B48013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A27441DE9892200B48013 /* AppDelegate.swift */; };
 		512A27471DE9892200B48013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A27461DE9892200B48013 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		212976D71DFA836E00097A77 /* TeacherDailyReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherDailyReportViewController.swift; sourceTree = "<group>"; };
 		215A94811DF940ED00947A78 /* TeacherCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherCheckinViewController.swift; sourceTree = "<group>"; };
 		31FE7B28A0BE0F884A033E44 /* Pods-CreativeAppDirectorTeacher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreativeAppDirectorTeacher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CreativeAppDirectorTeacher/Pods-CreativeAppDirectorTeacher.debug.xcconfig"; sourceTree = "<group>"; };
 		512A27411DE9892200B48013 /* CreativeAppDirectorTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreativeAppDirectorTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +72,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		212976D61DFA728900097A77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		4294480280CA3EFA1B898A3E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				512A27441DE9892200B48013 /* AppDelegate.swift */,
+				212976D61DFA728900097A77 /* Models */,
 				512A27611DE98F9400B48013 /* ViewControllers */,
 				512A27601DE98F8800B48013 /* Views */,
 				518A0DB71DE9FB1800A7FFE8 /* Language */,
@@ -138,6 +148,7 @@
 			children = (
 				512A27461DE9892200B48013 /* ViewController.swift */,
 				215A94811DF940ED00947A78 /* TeacherCheckinViewController.swift */,
+				212976D71DFA836E00097A77 /* TeacherDailyReportViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -320,6 +331,7 @@
 				512A275C1DE98BFB00B48013 /* Define.swift in Sources */,
 				512A27451DE9892200B48013 /* AppDelegate.swift in Sources */,
 				518A0DC81DEA0B6100A7FFE8 /* String+Localization.swift in Sources */,
+				212976D81DFA836E00097A77 /* TeacherDailyReportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
