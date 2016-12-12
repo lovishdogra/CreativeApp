@@ -8,41 +8,36 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
+		</dict>
+		<key>CVCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Pods-CreativeAppDirectorTeacher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Reachability.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>SwiftIconFont.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3228E70D25180E66671BC497337E8B30</key>
+		<key>195BADACE06C8AD85C3CD7598C7AA071</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4F4E19F60FCF17887257AE543FEE5992</key>
+		<key>9D02CFC3F5F736CA5B86CE433B8EBFBE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CCE98925B53935E0C1C576F25952BC42</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F09BB0A006C10029D8F7036C62439417</key>
+		<key>E2EF0A874A01FFC4D77FBAEED4802A12</key>
 		<dict>
 			<key>primary</key>
 			<true/>

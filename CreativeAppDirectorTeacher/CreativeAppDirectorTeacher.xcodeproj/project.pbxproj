@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212015C61DFE73DB00277CFB /* DirectorCreateMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212015C51DFE73DB00277CFB /* DirectorCreateMenuViewController.swift */; };
+		212015C81DFE91B800277CFB /* DirectorApproveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212015C71DFE91B800277CFB /* DirectorApproveViewController.swift */; };
+		212015CA1DFEA9D300277CFB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212015C91DFEA9D300277CFB /* CustomTableViewCell.swift */; };
+		212015CC1DFECD1C00277CFB /* DirectorAddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212015CB1DFECD1C00277CFB /* DirectorAddEventViewController.swift */; };
 		212976D81DFA836E00097A77 /* TeacherDailyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212976D71DFA836E00097A77 /* TeacherDailyReportViewController.swift */; };
 		215A94821DF940ED00947A78 /* TeacherCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A94811DF940ED00947A78 /* TeacherCheckinViewController.swift */; };
 		21FA1B051DFE0B130073AD87 /* TeacherCreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA1B041DFE0B130073AD87 /* TeacherCreateEventViewController.swift */; };
@@ -34,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		212015C51DFE73DB00277CFB /* DirectorCreateMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorCreateMenuViewController.swift; sourceTree = "<group>"; };
+		212015C71DFE91B800277CFB /* DirectorApproveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorApproveViewController.swift; sourceTree = "<group>"; };
+		212015C91DFEA9D300277CFB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		212015CB1DFECD1C00277CFB /* DirectorAddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorAddEventViewController.swift; sourceTree = "<group>"; };
 		212976D71DFA836E00097A77 /* TeacherDailyReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherDailyReportViewController.swift; sourceTree = "<group>"; };
 		215A94811DF940ED00947A78 /* TeacherCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherCheckinViewController.swift; sourceTree = "<group>"; };
 		21FA1B041DFE0B130073AD87 /* TeacherCreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherCreateEventViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +169,10 @@
 				21FA1B061DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift */,
 				21FA1B081DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift */,
 				21FA1B0A1DFE16FE0073AD87 /* TeacherProfileViewController.swift */,
+				212015C51DFE73DB00277CFB /* DirectorCreateMenuViewController.swift */,
+				212015C71DFE91B800277CFB /* DirectorApproveViewController.swift */,
+				212015C91DFEA9D300277CFB /* CustomTableViewCell.swift */,
+				212015CB1DFECD1C00277CFB /* DirectorAddEventViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -340,12 +352,16 @@
 				51E648791DE9C7D4004887F9 /* Singleton.swift in Sources */,
 				512A275D1DE98BFB00B48013 /* Utils.swift in Sources */,
 				21FA1B0B1DFE16FE0073AD87 /* TeacherProfileViewController.swift in Sources */,
+				212015C81DFE91B800277CFB /* DirectorApproveViewController.swift in Sources */,
 				512A27471DE9892200B48013 /* ViewController.swift in Sources */,
 				21FA1B051DFE0B130073AD87 /* TeacherCreateEventViewController.swift in Sources */,
+				212015CA1DFEA9D300277CFB /* CustomTableViewCell.swift in Sources */,
 				512A274D1DE9892200B48013 /* CreativeAppDirectorTeacher.xcdatamodeld in Sources */,
 				512A275C1DE98BFB00B48013 /* Define.swift in Sources */,
 				512A27451DE9892200B48013 /* AppDelegate.swift in Sources */,
+				212015CC1DFECD1C00277CFB /* DirectorAddEventViewController.swift in Sources */,
 				518A0DC81DEA0B6100A7FFE8 /* String+Localization.swift in Sources */,
+				212015C61DFE73DB00277CFB /* DirectorCreateMenuViewController.swift in Sources */,
 				212976D81DFA836E00097A77 /* TeacherDailyReportViewController.swift in Sources */,
 				21FA1B071DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift in Sources */,
 			);
@@ -499,6 +515,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rohit Singh (9GLGE7EB6S)";
 				DEVELOPMENT_TEAM = FX6C5866MT;
 				INFOPLIST_FILE = CreativeAppDirectorTeacher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EB.CreativeAppDirectorTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,6 +535,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rohit Singh (9GLGE7EB6S)";
 				DEVELOPMENT_TEAM = FX6C5866MT;
 				INFOPLIST_FILE = CreativeAppDirectorTeacher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EB.CreativeAppDirectorTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
