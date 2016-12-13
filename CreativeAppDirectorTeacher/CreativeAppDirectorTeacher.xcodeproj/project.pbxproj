@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210CEB6C1DFFBA1C001A4A2A /* DirectorChildPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210CEB6B1DFFBA1C001A4A2A /* DirectorChildPhotoViewController.swift */; };
+		210CEB6E1DFFBAF7001A4A2A /* DirectorCreateDailyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210CEB6D1DFFBAF7001A4A2A /* DirectorCreateDailyReportViewController.swift */; };
+		210CEB701DFFD434001A4A2A /* DirectorManagePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210CEB6F1DFFD434001A4A2A /* DirectorManagePaymentViewController.swift */; };
+		210CEB721DFFDFA8001A4A2A /* DirectorCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210CEB711DFFDFA8001A4A2A /* DirectorCheckinViewController.swift */; };
+		210CEB741DFFE9E7001A4A2A /* DirectorTrackMilestoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210CEB731DFFE9E7001A4A2A /* DirectorTrackMilestoneViewController.swift */; };
 		212015C61DFE73DB00277CFB /* DirectorCreateMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212015C51DFE73DB00277CFB /* DirectorCreateMenuViewController.swift */; };
 		212015C81DFE91B800277CFB /* DirectorApproveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212015C71DFE91B800277CFB /* DirectorApproveViewController.swift */; };
 		212015CA1DFEA9D300277CFB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212015C91DFEA9D300277CFB /* CustomTableViewCell.swift */; };
@@ -38,6 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		210CEB6B1DFFBA1C001A4A2A /* DirectorChildPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorChildPhotoViewController.swift; sourceTree = "<group>"; };
+		210CEB6D1DFFBAF7001A4A2A /* DirectorCreateDailyReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorCreateDailyReportViewController.swift; sourceTree = "<group>"; };
+		210CEB6F1DFFD434001A4A2A /* DirectorManagePaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorManagePaymentViewController.swift; sourceTree = "<group>"; };
+		210CEB711DFFDFA8001A4A2A /* DirectorCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorCheckinViewController.swift; sourceTree = "<group>"; };
+		210CEB731DFFE9E7001A4A2A /* DirectorTrackMilestoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorTrackMilestoneViewController.swift; sourceTree = "<group>"; };
 		212015C51DFE73DB00277CFB /* DirectorCreateMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorCreateMenuViewController.swift; sourceTree = "<group>"; };
 		212015C71DFE91B800277CFB /* DirectorApproveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorApproveViewController.swift; sourceTree = "<group>"; };
 		212015C91DFEA9D300277CFB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -91,6 +101,7 @@
 		212976D61DFA728900097A77 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				212015C91DFEA9D300277CFB /* CustomTableViewCell.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -171,8 +182,12 @@
 				21FA1B0A1DFE16FE0073AD87 /* TeacherProfileViewController.swift */,
 				212015C51DFE73DB00277CFB /* DirectorCreateMenuViewController.swift */,
 				212015C71DFE91B800277CFB /* DirectorApproveViewController.swift */,
-				212015C91DFEA9D300277CFB /* CustomTableViewCell.swift */,
 				212015CB1DFECD1C00277CFB /* DirectorAddEventViewController.swift */,
+				210CEB6B1DFFBA1C001A4A2A /* DirectorChildPhotoViewController.swift */,
+				210CEB6D1DFFBAF7001A4A2A /* DirectorCreateDailyReportViewController.swift */,
+				210CEB6F1DFFD434001A4A2A /* DirectorManagePaymentViewController.swift */,
+				210CEB711DFFDFA8001A4A2A /* DirectorCheckinViewController.swift */,
+				210CEB731DFFE9E7001A4A2A /* DirectorTrackMilestoneViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -346,9 +361,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				210CEB721DFFDFA8001A4A2A /* DirectorCheckinViewController.swift in Sources */,
 				215A94821DF940ED00947A78 /* TeacherCheckinViewController.swift in Sources */,
+				210CEB6C1DFFBA1C001A4A2A /* DirectorChildPhotoViewController.swift in Sources */,
+				210CEB6E1DFFBAF7001A4A2A /* DirectorCreateDailyReportViewController.swift in Sources */,
 				21FA1B091DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift in Sources */,
 				512A275E1DE98BFB00B48013 /* WebConnection.swift in Sources */,
+				210CEB701DFFD434001A4A2A /* DirectorManagePaymentViewController.swift in Sources */,
 				51E648791DE9C7D4004887F9 /* Singleton.swift in Sources */,
 				512A275D1DE98BFB00B48013 /* Utils.swift in Sources */,
 				21FA1B0B1DFE16FE0073AD87 /* TeacherProfileViewController.swift in Sources */,
@@ -356,6 +375,7 @@
 				512A27471DE9892200B48013 /* ViewController.swift in Sources */,
 				21FA1B051DFE0B130073AD87 /* TeacherCreateEventViewController.swift in Sources */,
 				212015CA1DFEA9D300277CFB /* CustomTableViewCell.swift in Sources */,
+				210CEB741DFFE9E7001A4A2A /* DirectorTrackMilestoneViewController.swift in Sources */,
 				512A274D1DE9892200B48013 /* CreativeAppDirectorTeacher.xcdatamodeld in Sources */,
 				512A275C1DE98BFB00B48013 /* Define.swift in Sources */,
 				512A27451DE9892200B48013 /* AppDelegate.swift in Sources */,
