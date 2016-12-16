@@ -14,26 +14,23 @@ class Utils: NSObject {
     
     static var hud : MBProgressHUD? = nil
     
+    //MARK: Start Activity Indicator
     class func startActivityIndicator(_ title:String?,detailMessage : String?, onView: UIView){
-        
         self.hud =  MBProgressHUD.showAdded(to: onView, animated: true)
         self.hud!.mode = MBProgressHUDMode.indeterminate
         if let unwarpTitle = title {
             self.hud!.label.text = unwarpTitle
-            
         }
         if let unwarpDetailsMessage = detailMessage {
             self.hud!.detailsLabel.text = unwarpDetailsMessage
-            
         }
-        
       //  print("hud\(hud)")
         self.hud!.show(animated: true)
     }
     
+    //MARK: Stop Activity Indicator
     class func stopActivityIndicator(){
         DispatchQueue.main.async(execute: { () -> Void in
-            
             if let unwrapHud = self.hud {
                 unwrapHud.isHidden = true
             } else {
@@ -42,6 +39,7 @@ class Utils: NSObject {
         })
     }
     
+    //MARK: Show Toast Message
     class func showToastMesaage(_ toView : UIView,message : String?,delay : TimeInterval){
         self.hud = nil
         self.hud = MBProgressHUD.showAdded(to: toView, animated: true)
@@ -53,49 +51,41 @@ class Utils: NSObject {
             self.hud!.detailsLabel.text = unwrapString;
         }
         self.hud!.removeFromSuperViewOnHide = true
-    
         self.hud!.hide(animated: true, afterDelay: delay)
     }
     
+    //MARK: Email Validation
     class func isValidEmail(_ testStr:String) -> Bool {
         // println("validate calendar: \(testStr)")
         let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
-        
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
     }
     
+    //MARK: Phone Number Validation
     class func isValidPhone(_ value: String) -> Bool {
-        
        // let PHONE_REGEX = "^\\+\\d{3}-\\d{2}-\\d{7}$"
         let PHONE_REGEX = "^[2-9]{2}[0-9]{8}$"
-
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
-        
         let result =  phoneTest.evaluate(with: value)
-        
         return result
-        
     }
-
+    
+    //MARK: AlertView without button
     class func showAlertViewOnViewController(_ viewC : UIViewController,title: String, message: String){
     
         let alert : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        
-        
         let okAction : UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default) { (action: UIAlertAction) -> Void in
             alert.dismiss(animated: true, completion: { () -> Void in
                 
             })
-            
         }
         alert.addAction(okAction)
         viewC.present(alert, animated: true) { () -> Void in
-            
         }
-        
     }
     
+    //MARK: CreateTopStatusBar
     class func createTopStatusBarOnView(_ view:UIView) -> UIView {
     let statusBarView  = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 20))
     statusBarView.backgroundColor = UIColor.black
@@ -104,11 +94,10 @@ class Utils: NSObject {
         
     }
     
+    //MARK: Localized Strings
     class func returnLocalizedStringForKey (key : String) -> String {
-        
         let str : String = NSString(string: key.localized(lang: userDef.value(forKey: LANGUAGE) as! String)) as String
         return str
-        
     }
     
    

@@ -8,6 +8,28 @@
 
 //French
 
+//Days
+"monday" = "Lundi";
+"tuesday" = "Mardi";
+"wednesday" = "Mercredi";
+"thursday" = "Jeudi";
+"friday" = "Vendredi";
+"saturday" = "Samedi";
+
+//Months
+"jan" = "Janvier";
+"feb" = "Fevrier";
+"mar" = "Mars";
+"apr" = "Avril";
+"may" = "Mai";
+"jun" = "Juin";
+"jul" = "Juillet";
+"aug" = "Août";
+"sep" = "Septembre";
+"oct" = "Octobre";
+"nov" = "Novembre";
+"dec" = "Décembre";
+
 //ViewController : Login View
 "enter_email" = "Class Name/Admin User French";
 "enter_password" = "Class Password/Password User French";
@@ -17,3 +39,12 @@
 "popup_enter_email" = "Enter Email French" ;
 "btn_reset_password" = "Reset Password French";
 
+//TeacherCheckInViewController
+"label_teacher_welcome" = "Hey Teacher, Bienvenue à l'application créative";
+"label_logout" = "Se Déconnecter";
+"label_select_all" = "Sélectionner tout";
+"label_selected_kids" = "Enfants sélectionnés";
+"btn_confirm_checkin" = "Confirmer l'enregistrement";
+
+"message_confirm_checkin" = "Do you really want to select all the Child? French";
+"message_confirm_logout" = "Do you really want to logout? French";

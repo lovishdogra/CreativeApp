@@ -8,6 +8,28 @@
 
 //English
 
+//Days
+"monday" = "Monday";
+"tuesday" = "Tuesday";
+"wednesday" = "Wednesday";
+"thursday" = "Thursday";
+"friday" = "Friday";
+"saturday" = "Saturday";
+
+//Months
+"jan" = "January";
+"feb" = "Feburary";
+"mar" = "March";
+"apr" = "April";
+"may" = "May";
+"jun" = "June";
+"jul" = "July";
+"aug" = "August";
+"sep" = "September";
+"oct" = "October";
+"nov" = "November";
+"dec" = "December";
+
 //ViewController : Login View
 "enter_email" = "Class Name/Admin User";
 "enter_password" = "Class Password/Password User";
@@ -16,3 +38,13 @@
 "label_pop_forgot_password" = "Forgot Password";
 "popup_enter_email" = "Enter Email";
 "btn_reset_password" = "Reset Password";
+
+//TeacherCheckInViewController
+"label_teacher_welcome" = "Hey Teacher Welcome to Creative App";
+"label_logout" = "Logout";
+"label_select_all" = "Select All";
+"label_selected_kids" = "Selected Kids";
+"btn_confirm_checkin" = "Confirm Check-in";
+
+"message_confirm_checkin" = "Do you really want to select all the Child?";
+"message_confirm_logout" = "Do you really want to logout?";

@@ -22,3 +22,7 @@ let colorOrange = UIColor(red:244.0/255.0, green:89.0/255.0, blue:61.0/255.0, al
 let colorRed = UIColor(red:0.98, green:0.44, blue:0.30, alpha:1.0)
 let colorBackgroundGrey = UIColor(red: 246.0/255.0, green: 246.0/255.0, blue: 246.0/255.0, alpha: 1.0)
 let colorNavBarBlue = UIColor(red: 61.0/255.0, green: 160.0/255.0, blue: 195.0/255.0, alpha: 1.0)
+
+//MARK: TeacherCheckinViewController
+let colorTopNavBarBlue = UIColor(red: 80.0/255.0, green: 147.0/255.0, blue: 247.0/255.0, alpha: 1.0)
+let colorLightBlue = UIColor(red: 80.0/255.0, green: 147.0/255.0, blue: 247.0/255.0, alpha: 0.8)

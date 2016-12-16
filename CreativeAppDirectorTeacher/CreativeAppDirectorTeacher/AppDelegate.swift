@@ -20,8 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         userDef.set("fr", forKey: LANGUAGE)
         userDef.synchronize()
         
-        
-        // Override point for customization after application launch.
         return true
     }
 

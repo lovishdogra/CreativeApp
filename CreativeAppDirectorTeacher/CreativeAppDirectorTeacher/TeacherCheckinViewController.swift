@@ -7,39 +7,55 @@
 //
 
 import UIKit
+import SwiftIconFont
 
 class TeacherCheckinViewController : UIViewController {
 
     //MARK: Declaration & IBOutlets
-        //Container Views
+        //Views
     @IBOutlet var viewContainerMaster: UIView!
-    @IBOutlet var viewContainerNavbar: UIView!
+    @IBOutlet weak var viewHeaderTop: UIView!
+    @IBOutlet weak var viewImageClassTopContainer: UIView!
+    @IBOutlet weak var viewHeaderBottom: UIView!
+    @IBOutlet weak var ViewBottomContainer: UIView!
+    @IBOutlet weak var viewBottomCollectionContainer: UIView!
     
-        //Navbar Contents
-    @IBOutlet var imageViewNavbar: UIImageView!
-    @IBOutlet var labelDateNavbar: UILabel!
-    @IBOutlet var labelInitialsNavbar: UILabel!
-    @IBOutlet var btnExitNavbar: UIButton!
-    @IBOutlet var labelLogoutNavbar: UILabel!
+        //Labels
+    @IBOutlet weak var labelDateDay: UILabel!
+    @IBOutlet weak var labelTeacherWelcome: UILabel!
+    @IBOutlet weak var labelLogoutBtn: UILabel!
+    @IBOutlet weak var labelClassName: UILabel!
+    @IBOutlet weak var labelSelectAllKidText: UILabel!
     
-        //Collection View 1
-    @IBOutlet var labelClassName: UILabel!
-    //@IBOutlet var cellMenu: UICollectionViewCell!
-    //@IBOutlet var btnCellMenu: UIButton!
-    //@IBOutlet var labelCellMenu: UILabel!
     
-        //Collection View 2
-    @IBOutlet var btnChildrenSelectAll: UIButton!
-    @IBOutlet var labelChildrenSelectAll: UILabel!
-    //@IBOutlet var cellChildren: UICollectionViewCell!
-    //@IBOutlet var imageViewCellChildren: UIImageView!
-    //@IBOutlet var labelCellChildren: UILabel!
+        //Buttons
+    @IBOutlet weak var btnLogout: UIButton!
+    @IBOutlet weak var btnSelectAllKidIcon: UIButton!
+    @IBOutlet weak var btnConfirmCheckIn: UIButton!
     
-        //Collection Views
+    
+    
+        //Images
+    @IBOutlet weak var imageViewClassIconTop: UIImageView!
+    
+    
+        //Collections
     @IBOutlet var viewCollectionMenu: UICollectionView!
     @IBOutlet var viewCollectionChildren: UICollectionView!
     @IBOutlet var viewCollectionDetailBelow: UICollectionView!
     
+    //MARK: IBActions of Buttons
+    @IBAction func tapSelectAllKids(_ sender: Any) {
+    }
+    
+    @IBAction func tapConfirmCheckIn(_ sender: Any) {
+        Utils.showAlertViewOnViewController(self, title: "CreativeApp", message: Utils.returnLocalizedStringForKey(key: "message_confirm_checkin"))
+    }
+    
+    
+    @IBAction func tapLogout(_ sender: Any) {
+        Utils.showAlertViewOnViewController(self, title: "CreativeApp" , message: Utils.returnLocalizedStringForKey(key: "message_confirm_logout"))
+    }
     
     //MARK: View Life Cycle
     override func viewDidLoad() {
@@ -57,6 +73,25 @@ class TeacherCheckinViewController : UIViewController {
         viewCollectionMenu.dataSource = self
         viewCollectionChildren.dataSource = self
         viewCollectionDetailBelow.dataSource = self
+        
+        //Icons
+        btnLogout.setTitle("FA:sign-out", for: .normal)
+        btnLogout.parseIcon()
+        btnSelectAllKidIcon.setTitle("FA:users", for: .normal)
+        btnSelectAllKidIcon.parseIcon()
+        
+        //Language
+        labelTeacherWelcome.text = Utils.returnLocalizedStringForKey(key: "label_teacher_welcome")
+        labelLogoutBtn.text = Utils.returnLocalizedStringForKey(key: "label_logout")
+        labelSelectAllKidText.text = Utils.returnLocalizedStringForKey(key: "label_select_all")
+        btnConfirmCheckIn.setTitle(Utils.returnLocalizedStringForKey(key: "btn_confirm_checkin"), for: .normal)
+        
+        //Colors
+        viewHeaderTop.layer.backgroundColor = colorTopNavBarBlue.cgColor
+        viewImageClassTopContainer.layer.backgroundColor = colorLightBlue.cgColor
+        btnSelectAllKidIcon.setTitleColor(colorLightBlue, for: .normal)
+        
+        
     }
 }
 

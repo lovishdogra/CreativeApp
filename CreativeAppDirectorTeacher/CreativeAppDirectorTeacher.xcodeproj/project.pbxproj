@@ -18,6 +18,7 @@
 		212015CC1DFECD1C00277CFB /* DirectorAddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212015CB1DFECD1C00277CFB /* DirectorAddEventViewController.swift */; };
 		212976D81DFA836E00097A77 /* TeacherDailyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212976D71DFA836E00097A77 /* TeacherDailyReportViewController.swift */; };
 		215A94821DF940ED00947A78 /* TeacherCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A94811DF940ED00947A78 /* TeacherCheckinViewController.swift */; };
+		21B67DC51E03D4D30044D21A /* CollectionViewCellTeacherCheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B67DC41E03D4D30044D21A /* CollectionViewCellTeacherCheckinView.swift */; };
 		21FA1B051DFE0B130073AD87 /* TeacherCreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA1B041DFE0B130073AD87 /* TeacherCreateEventViewController.swift */; };
 		21FA1B071DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA1B061DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift */; };
 		21FA1B091DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA1B081DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift */; };
@@ -54,6 +55,7 @@
 		212015CB1DFECD1C00277CFB /* DirectorAddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorAddEventViewController.swift; sourceTree = "<group>"; };
 		212976D71DFA836E00097A77 /* TeacherDailyReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherDailyReportViewController.swift; sourceTree = "<group>"; };
 		215A94811DF940ED00947A78 /* TeacherCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherCheckinViewController.swift; sourceTree = "<group>"; };
+		21B67DC41E03D4D30044D21A /* CollectionViewCellTeacherCheckinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellTeacherCheckinView.swift; sourceTree = "<group>"; };
 		21FA1B041DFE0B130073AD87 /* TeacherCreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherCreateEventViewController.swift; sourceTree = "<group>"; };
 		21FA1B061DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherCreateChildPhotoViewController.swift; sourceTree = "<group>"; };
 		21FA1B081DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherTrackMilestonesViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				212015C91DFEA9D300277CFB /* CustomTableViewCell.swift */,
+				21B67DC41E03D4D30044D21A /* CollectionViewCellTeacherCheckinView.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				212015CA1DFEA9D300277CFB /* CustomTableViewCell.swift in Sources */,
 				210CEB741DFFE9E7001A4A2A /* DirectorTrackMilestoneViewController.swift in Sources */,
 				512A274D1DE9892200B48013 /* CreativeAppDirectorTeacher.xcdatamodeld in Sources */,
+				21B67DC51E03D4D30044D21A /* CollectionViewCellTeacherCheckinView.swift in Sources */,
 				512A275C1DE98BFB00B48013 /* Define.swift in Sources */,
 				512A27451DE9892200B48013 /* AppDelegate.swift in Sources */,
 				212015CC1DFECD1C00277CFB /* DirectorAddEventViewController.swift in Sources */,
