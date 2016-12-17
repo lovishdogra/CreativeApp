@@ -15,8 +15,6 @@ class TeacherDailyReportViewController: UIViewController {
     @IBOutlet var viewTopContainer: UIView!
     @IBOutlet var labelSubject: UILabel!
     @IBOutlet var imageViewSubjectIcon: UIImageView!
-    @IBOutlet var labelAttachedfiles: UILabel!
-    @IBOutlet var imageViewAttachedfilesIcon: UIImageView!
     @IBOutlet var imageviewChild: UIImageView!
     
     @IBOutlet var viewBelowContainer: UIView!
@@ -29,10 +27,7 @@ class TeacherDailyReportViewController: UIViewController {
     @IBOutlet var textviewDescription: UITextView!
     
     @IBOutlet var btnAddEntry: UIButton!
-        //Dropdown
     @IBOutlet var textfieldDropdown: UITextField!
-    @IBOutlet var pickerviewDropdown: UIPickerView!
-    var dropdownOptions = ["Information","Carnival","Progression","Menu","Dummy","Data"]
     
         //Image Picker
     var imagePicker = UIImagePickerController()
@@ -68,29 +63,6 @@ class TeacherDailyReportViewController: UIViewController {
     }
 }
 
-//MARK: Dropdown Extension
-extension TeacherDailyReportViewController : UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dropdownOptions.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.textfieldDropdown.text = self.dropdownOptions[row]
-        self.pickerviewDropdown.isHidden = true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == self.textfieldDropdown {
-            self.pickerviewDropdown.isHidden = false
-            textfieldDropdown.endEditing(true)
-        }
-    }
-}
 
 //MARK: ImagePicker Extension
 extension TeacherDailyReportViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
