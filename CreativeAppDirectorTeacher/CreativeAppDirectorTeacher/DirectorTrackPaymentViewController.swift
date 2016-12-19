@@ -1,17 +1,18 @@
 //
-//  DirectorManagePaymentViewController.swift
+//  DirectorTrackPaymentViewController.swift
 //  CreativeAppDirectorTeacher
 //
-//  Created by Lovish Dogra on 13/12/16.
+//  Created by Lovish Dogra on 19/12/16.
 //  Copyright © 2016 EB. All rights reserved.
 //
 
 import UIKit
 
-class DirectorManagePaymentViewController: UIViewController {
+class DirectorTrackPaymentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
     }
 
@@ -19,5 +20,3 @@ class DirectorManagePaymentViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 }
-
-//TODO: Create payment Popup box.

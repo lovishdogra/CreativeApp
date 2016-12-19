@@ -1,14 +1,14 @@
 //
-//  DirectorAddEventViewController.swift
+//  DirectorCreateEventViewController.swift
 //  CreativeAppDirectorTeacher
 //
-//  Created by Lovish Dogra on 12/12/16.
+//  Created by Lovish Dogra on 19/12/16.
 //  Copyright © 2016 EB. All rights reserved.
 //
 
 import UIKit
 
-class DirectorAddEventViewController: UIViewController {
+class DirectorCreateEventViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
