@@ -9,14 +9,43 @@
 import UIKit
 
 class DirectorChildPhotoViewController: UIViewController {
-
+    
+    //MARK: Declaration & IBOutlets
+        //Views
+    @IBOutlet weak var viewMasterContainer: UIView!
+    @IBOutlet weak var viewTopbarContainer: UIView!
+    @IBOutlet weak var viewBottomContainer: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+        //Labels
+    @IBOutlet weak var labelSelectedKids: UILabel!
+    @IBOutlet weak var labelClassName: UILabel!
+    
+    
+        //Buttons
+    @IBOutlet weak var btnTakePhotos: UIButton!
+    @IBOutlet weak var btnSendPhotos: UIButton!
+    
+    
+    //MARK: IBActions
+    
+    @IBAction func tapTakePhotos(_ sender: Any) {
+    }
+    @IBAction func tapSendPhotos(_ sender: Any) {
+    }
+    
+    //MARK: Viewlife Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initialization()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    //MARK: Private Methods
+    func initialization(){
+        
     }
 }

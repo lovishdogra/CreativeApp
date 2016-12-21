@@ -12,38 +12,53 @@ class TeacherDailyReportViewController: UIViewController {
     
     //MARK: Variables & IBOutlets
     
-    @IBOutlet var viewTopContainer: UIView!
-    @IBOutlet var labelSubject: UILabel!
-    @IBOutlet var imageViewSubjectIcon: UIImageView!
-    @IBOutlet var imageviewChild: UIImageView!
+        //Views
+    @IBOutlet weak var ViewMasterContainer: UIView!
+    @IBOutlet weak var viewTopbarContainer: UIView!
+    @IBOutlet weak var viewBottomContainer: UIView!
+    @IBOutlet weak var scrollview: UIScrollView!
+    @IBOutlet weak var viewContainerScroll: UIView!
+    @IBOutlet weak var viewScrollUpper: UIView!
+    @IBOutlet weak var viewScrollBottom: UIView!
+    @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet var viewBelowContainer: UIView!
-    @IBOutlet var labelCameraIcon: UILabel!
-    @IBOutlet var btnCameraimage: UIButton!
-    @IBOutlet var labelGalleryIcon: UILabel!
-    @IBOutlet var btnGalleryimage: UIButton!
+        //Label
+    @IBOutlet weak var labelSelectedKids: UILabel!
+    @IBOutlet weak var labelSubject: UILabel!
+    @IBOutlet weak var labelCameraIcon: UILabel!
+    @IBOutlet weak var labelGalleryIcon: UILabel!
+    @IBOutlet weak var labelDescription: UILabel!
     
-    @IBOutlet var labelDescription: UILabel!
-    @IBOutlet var textviewDescription: UITextView!
     
-    @IBOutlet var btnAddEntry: UIButton!
-    @IBOutlet var textfieldDropdown: UITextField!
+        //Buttons
+    @IBOutlet weak var btnKidsDisplay: UIButton!
+    @IBOutlet weak var btnCamera: UIButton!
+    @IBOutlet weak var btnGallery: UIButton!
+    @IBOutlet weak var btnAddEntry: UIButton!
+    
+        //TextViews
+    @IBOutlet weak var textFieldSubject: UITextField!
+    @IBOutlet weak var textViewDescription: UITextView!
+    
+    
+        //ImageViews
+    @IBOutlet weak var imageViewIcon: UIImageView!
+    @IBOutlet weak var imageViewChild: UIImageView!
+    
     
         //Image Picker
     var imagePicker = UIImagePickerController()
     
     
     //MARK: Button Actions
-    @IBAction func tapCameraImage(_ sender: Any) {
-        
+    @IBAction func tapKidsDisplay(_ sender: Any) {
     }
-    @IBAction func tapGalleryImage(_ sender: Any) {
-        
+    @IBAction func tapCamera(_ sender: Any) {
+    }
+    @IBAction func tapGallery(_ sender: Any) {
     }
     @IBAction func tapAddEntry(_ sender: Any) {
-        
     }
-    
     
     //MARK: View Life Cycle Methods
     
@@ -70,8 +85,8 @@ extension TeacherDailyReportViewController : UINavigationControllerDelegate, UII
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageviewChild.contentMode = .scaleAspectFit
-            imageviewChild.image = pickedImage
+            imageViewChild.contentMode = .scaleAspectFit
+            imageViewChild.image = pickedImage
         }
     }
     

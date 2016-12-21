@@ -9,27 +9,60 @@
 import UIKit
 
 class DirectorCreateEventViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    //MARK: Declarations & IBOutlets
+        //Views
+    @IBOutlet weak var viewMasterContainer: UIView!
+    @IBOutlet weak var viewTopbarContainer: UIView!
+    @IBOutlet weak var viewBottomContainer: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var viewInnerScrollContainer: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    
+        //Labels
+    @IBOutlet weak var labelSelectedKids: UILabel!
+    @IBOutlet weak var labelClass: UILabel!
+    @IBOutlet weak var labelEventDescription: UILabel!
+    @IBOutlet weak var labelStart: UILabel!
+    @IBOutlet weak var labelEnd: UILabel!
+    @IBOutlet weak var labelReminder: UILabel!
+    @IBOutlet weak var labelPrice: UILabel!
+    @IBOutlet weak var labelComingEvent: UILabel!
+    
+    
+        //Buttons
+    @IBOutlet weak var btnIcon: UIButton!
+    @IBOutlet weak var btnAddEntry: UIButton!
+    
+    
+        //Texts
+    
+    @IBOutlet weak var textFieldEventTitle: UITextField!
+    @IBOutlet weak var textViewEventDescription: UITextView!
+    @IBOutlet weak var textFieldStartDate: UITextField!
+    @IBOutlet weak var textFieldEndDate: UITextField!
+    @IBOutlet weak var textFieldReminder: UITextField!
+    @IBOutlet weak var textFieldPrice: UITextField!
+    
+    //MARK: IBActions
+    
+    @IBAction func tapIcon(_ sender: Any) {
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func tapAddEntry(_ sender: Any) {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //MARK: ViewLife Methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initialization()
     }
-    */
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    //MARK: Private Methods
+    func initialization(){
+        
+    }
 }
