@@ -9,6 +9,7 @@
 //English
 
 //Days
+"sunday" = "Sunday";
 "monday" = "Monday";
 "tuesday" = "Tuesday";
 "wednesday" = "Wednesday";
@@ -30,6 +31,46 @@
 "nov" = "November";
 "dec" = "December";
 
+//Common Texts
+"logout" = "Logout";
+"cancel" = "Cancel";
+"add" = "Add";
+"back" = "Back";
+"save" = "Save";
+"selected_kids" = "Selected Kids";
+"selected_kids_btn" = "Kids";
+"confirm_check_in" = "Confirm Checkin";
+"save_eval" = "Save Evaluation";
+"add_eval" = "Add Evaluation";
+"take_photo" = "Take Photo";
+"send_photo" = "Send Photo";
+"selected_standard" = "Selected Standards";
+"enable_auto_approve" = "Enable Auto Approve of daily report";
+"camera" = "Camera";
+"gallery" = "Gallery";
+"add_entry" = "Add Entry";
+"message_confirm_checkin" = "Do you really want to select all the Child?";
+"message_confirm_logout" = "Do you really want to logout?";
+"send_to" = "Send to";
+"edit" = "Edit";
+"create" = "Create";
+
+//Top Menu Bar (Teacher/Director)
+"label_teacher_welcome" = "Hey Teacher, Welcome to Creative App";
+"label_director_welcome" = "Hey Director, Welcome to Creative App";
+"confirm_checkin" = "Check in";
+"daily_report" = "Daily report";
+"milestone" = "Milestones";
+"add_event" = "Add Event";
+"gallery" = "Gallery";
+"profile" = "Profile";
+"manage" = "Manage";
+"payments" = "Payments";
+"select_all" = "Select all";
+"select_kids" = "Select Kids";
+"select_standards" = "Select Standards";
+"select_all_class" = "Select All Class";
+
 //ViewController : Login View
 "enter_email" = "Class Name/Admin User";
 "enter_password" = "Class Password/Password User";
@@ -39,12 +80,137 @@
 "popup_enter_email" = "Enter Email";
 "btn_reset_password" = "Reset Password";
 
-//TeacherCheckInViewController
-"label_teacher_welcome" = "Hey Teacher Welcome to Creative App";
-"label_logout" = "Logout";
-"label_select_all" = "Select All";
-"label_selected_kids" = "Selected Kids";
-"btn_confirm_checkin" = "Confirm Check-in";
+//Teacher/Director CheckInViewController
 
-"message_confirm_checkin" = "Do you really want to select all the Child?";
-"message_confirm_logout" = "Do you really want to logout?";
+//Teacher/Director Daily report
+"subject" = "Subject";
+"description" = "Description";
+
+//Teacher/Director track milestone
+
+//Teacher/Director Create Event
+"event_description" = "Event Description";
+"starts" = "Starts";
+"ends" = "Ends";
+"reminder" = "Reminder";
+"price" = "Price";
+"coming_event" = "Coming Event";
+"placeholder_event_title" = "Event Title";
+"placeholder_event_description" = "Event Description";
+"placeholder_reminder" = "Reminder";
+"placeholder_price" = "Price";
+
+//Teacher/Director Create Child Photo
+
+
+//Teacher/Director profile
+"child_care_plan" = "Child Care Plan";
+"meal_plan" = "Meal Plan";
+"transport_plan" = "Transportation Plan";
+"parent" = "Parent";
+"other_gaurd" = "Other Guardian";
+"spl_note" = "Special Notes";
+
+//Director Manage Class
+"create_level" = "Create Level";
+"create_class" = "Create Class";
+"add_child" = "Add Child";
+"move_child" = "Move Child";
+"payment" = "Payment";
+"milestone" = "Milestones";
+"create_meal" = "Create Meal";
+
+//Director Manage Create Level
+"upload_icon" = "Upload Icon";
+"level_title" = "Level Title";
+"age_range" = "Age Range";
+
+//Director Manage Create Class
+"upload_icon" = "Upload Icon";
+"select_level" = "Select Level";
+"class_name" = "Class Name";
+"class_code" = "Class Code";
+
+//Director Manage Add Child
+"placeholder_enter_name" = "Enter Name";
+"placeholder_choose_gender" = "Choose Gender";
+"placeholder_DOB" = "Select Date Of Birth";
+"placeholder_spl_note" = "Special Notes";
+"placeholder_enter_add" = "Enter Address";
+"placeholder_enter_city" = "Enter City";
+"placeholder_select_country" = "Select Country";
+"placeholder_choose_level" = "Choose Level";
+"placeholder_choose_class" = "Choose Class";
+"placeholder_enter_child_care_plan" = "Enter Child Care Plan";
+"placeholder_enter_meal_plan" = "Enter Meal Plan";
+"placeholder_enter_transport_plan" = "Enter Transportation Plan";
+"select_level_class" = "Select Level and Class";
+"child_care_plan" = "Child Care Plan";
+
+//Director Manage Add Child 2
+"add_guardian" = "Add Guardian";
+"placeholder_enter_name" = "Enter Name";
+"placeholder_enter_phn" = "Enter Phone Number";
+"placeholder_enter_email" = "Enter E-mail";
+"placeholder_choose_parent_type" = "Choose Parenting Type";
+"or" = "Or";
+"send_code" = "Send Code";
+
+//Director Manage Move Child
+"current_level" = "Current Level";
+"current_class" = "Current Class";
+"new_level" = "New Level";
+"new_class" = "New Class";
+"placeholder_enter_class_name" = "Enter Class Name";
+"placeholder_new_class_name" = "Enter New Class Name";
+"move" = "Move";
+
+//Director Manage Milestone
+"level_one_milestone" = "Level One Milestone";
+
+
+
+//Director Manage Create Meal
+"starter" = "Starters";
+"main_course" = "Main Course";
+"dessert" = "Dessert";
+"placeholder_enter_starter" = "Enter the starter";
+"placeholder_enter_main_course" = "Enter the main course";
+"placeholder_enter_dessert" = "Enter the dessert";
+
+//Director manage payment
+"plan_title" = "Plan Title";
+"price" = "Price";
+"due_date" = "Due Date";
+"placeholder_enter_plan" = "Enter plan name";
+"placeholder_price" = "Enter price";
+"placeholder_select_due_date" = "Select due date";
+
+//Director Track Payment
+"billing_summary" = "Billing Summary";
+
+//Director School Info
+"school_info" = "School Information";
+"director_info" = "Director Information";
+"save_all_details" = "Save all details";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

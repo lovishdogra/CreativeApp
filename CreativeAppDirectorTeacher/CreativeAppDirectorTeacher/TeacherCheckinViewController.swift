@@ -82,9 +82,9 @@ class TeacherCheckinViewController : UIViewController {
         
         //Language
         labelTeacherWelcome.text = Utils.returnLocalizedStringForKey(key: "label_teacher_welcome")
-        labelLogoutBtn.text = Utils.returnLocalizedStringForKey(key: "label_logout")
-        labelSelectAllKidText.text = Utils.returnLocalizedStringForKey(key: "label_select_all")
-        btnConfirmCheckIn.setTitle(Utils.returnLocalizedStringForKey(key: "btn_confirm_checkin"), for: .normal)
+        labelLogoutBtn.text = Utils.returnLocalizedStringForKey(key: "logout")
+        labelSelectAllKidText.text = Utils.returnLocalizedStringForKey(key: "select_all")
+        btnConfirmCheckIn.setTitle(Utils.returnLocalizedStringForKey(key: "confirm_checkin"), for: .normal)
         
         //Colors
         viewHeaderTop.layer.backgroundColor = colorTopNavBarBlue.cgColor
