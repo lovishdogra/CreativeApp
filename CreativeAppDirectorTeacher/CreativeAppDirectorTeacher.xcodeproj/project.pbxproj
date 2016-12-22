@@ -26,6 +26,7 @@
 		2197281C1E07E211004640B1 /* DirectorMilestoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2197281B1E07E211004640B1 /* DirectorMilestoneViewController.swift */; };
 		2197281E1E07E292004640B1 /* DirectorCreateMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2197281D1E07E292004640B1 /* DirectorCreateMealViewController.swift */; };
 		21B67DC51E03D4D30044D21A /* CollectionViewCellTeacherCheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B67DC41E03D4D30044D21A /* CollectionViewCellTeacherCheckinView.swift */; };
+		21E152681E0BA42E00388DE3 /* DirectorAddChild2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E152671E0BA42E00388DE3 /* DirectorAddChild2ViewController.swift */; };
 		21FA1B051DFE0B130073AD87 /* TeacherCreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA1B041DFE0B130073AD87 /* TeacherCreateEventViewController.swift */; };
 		21FA1B071DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA1B061DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift */; };
 		21FA1B091DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA1B081DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift */; };
@@ -70,6 +71,7 @@
 		2197281B1E07E211004640B1 /* DirectorMilestoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorMilestoneViewController.swift; sourceTree = "<group>"; };
 		2197281D1E07E292004640B1 /* DirectorCreateMealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorCreateMealViewController.swift; sourceTree = "<group>"; };
 		21B67DC41E03D4D30044D21A /* CollectionViewCellTeacherCheckinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellTeacherCheckinView.swift; sourceTree = "<group>"; };
+		21E152671E0BA42E00388DE3 /* DirectorAddChild2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorAddChild2ViewController.swift; sourceTree = "<group>"; };
 		21FA1B041DFE0B130073AD87 /* TeacherCreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherCreateEventViewController.swift; sourceTree = "<group>"; };
 		21FA1B061DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherCreateChildPhotoViewController.swift; sourceTree = "<group>"; };
 		21FA1B081DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherTrackMilestonesViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				219728111E07E135004640B1 /* DirectorCreateLevelViewController.swift */,
 				219728131E07E14A004640B1 /* DirectorCreateClassViewController.swift */,
 				219728151E07E1D8004640B1 /* DirectorAddChildViewController.swift */,
+				21E152671E0BA42E00388DE3 /* DirectorAddChild2ViewController.swift */,
 				219728171E07E1E9004640B1 /* DirectorMoveChildViewController.swift */,
 				219728191E07E1FB004640B1 /* DirectorPaymentViewController.swift */,
 				2197281B1E07E211004640B1 /* DirectorMilestoneViewController.swift */,
@@ -411,6 +414,7 @@
 				512A274D1DE9892200B48013 /* CreativeAppDirectorTeacher.xcdatamodeld in Sources */,
 				21B67DC51E03D4D30044D21A /* CollectionViewCellTeacherCheckinView.swift in Sources */,
 				219728181E07E1E9004640B1 /* DirectorMoveChildViewController.swift in Sources */,
+				21E152681E0BA42E00388DE3 /* DirectorAddChild2ViewController.swift in Sources */,
 				512A275C1DE98BFB00B48013 /* Define.swift in Sources */,
 				512A27451DE9892200B48013 /* AppDelegate.swift in Sources */,
 				518A0DC81DEA0B6100A7FFE8 /* String+Localization.swift in Sources */,

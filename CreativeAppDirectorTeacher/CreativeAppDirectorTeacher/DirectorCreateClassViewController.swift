@@ -9,13 +9,23 @@
 import UIKit
 
 class DirectorCreateClassViewController: UIViewController {
-
+    
+    //MARK: Declaration & IBOutlets
+        //Views
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    //MARK: ViewLife Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initialization()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    //MARK: Private Methods
+    func initialization(){
+        
     }
 }

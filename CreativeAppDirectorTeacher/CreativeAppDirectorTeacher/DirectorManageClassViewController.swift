@@ -11,17 +11,17 @@ import UIKit
 class DirectorManageClassViewController: UIViewController {
     
     //MARK: Declaration & IBOutlets
+        //View
+    @IBOutlet weak var viewMasterContainer: UIView!
+    @IBOutlet weak var viewTopbarContainer: UIView!
+    @IBOutlet weak var viewBottomContainer: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    
-    //MARK: Button IBActions
-
     //MARK: ViewLife Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         initailization()
-        
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

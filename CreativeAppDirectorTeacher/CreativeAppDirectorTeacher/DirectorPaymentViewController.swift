@@ -9,13 +9,24 @@
 import UIKit
 
 class DirectorPaymentViewController: UIViewController {
-
+    
+    //MARK: Declaration & IBOutlets
+        //Views
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    
+    //MARK: ViewLife Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initailization()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    //Private Methods
+    func initailization(){
+        
     }
 }
