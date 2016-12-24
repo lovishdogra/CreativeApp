@@ -35,7 +35,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialization()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +44,7 @@ class ViewController: UIViewController {
 
     //MARK: IBActions of Buttons
     @IBAction func tapLogin(_ sender: UIButton) {
+        
         
     }
     
@@ -91,7 +91,7 @@ class ViewController: UIViewController {
         self.textFieldEmail.leftViewMode = UITextFieldViewMode.always
         self.textFieldEmail.leftView = labelEmail
         self.textFieldEmail.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
-        self.textFieldEmail.attributedPlaceholder = NSAttributedString(string: "enter_email".localized(lang: userDef.value(forKey: LANGUAGE) as! String), attributes: [NSForegroundColorAttributeName : UIColor.black])
+        self.textFieldEmail.attributedPlaceholder = NSAttributedString(string: "enter_email".localized(userDef.value(forKey: LANGUAGE) as! String), attributes: [NSForegroundColorAttributeName : UIColor.black])
         self.textFieldEmail.layer.cornerRadius = 3.0
         
         let labelPassword = UILabel(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
@@ -101,18 +101,18 @@ class ViewController: UIViewController {
         self.textFieldPassword.leftViewMode = UITextFieldViewMode.always
         self.textFieldPassword.leftView = labelPassword
         self.textFieldPassword.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
-        self.textFieldPassword.attributedPlaceholder = NSAttributedString(string: "enter_password".localized(lang: userDef.value(forKey: LANGUAGE) as! String), attributes: [NSForegroundColorAttributeName : UIColor.black])
+        self.textFieldPassword.attributedPlaceholder = NSAttributedString(string: "enter_password".localized(userDef.value(forKey: LANGUAGE) as! String), attributes: [NSForegroundColorAttributeName : UIColor.black])
         self.textFieldPassword.layer.cornerRadius = 5.0
         self.textFieldPassword.isSecureTextEntry = true
         
         self.btnLogin.layer.cornerRadius = 3.0
         
         //Language
-        self.btnLogin.setTitle(Utils.returnLocalizedStringForKey(key: "btn_login"), for: .normal)
-        self.labelForgotPassword.setTitle(Utils.returnLocalizedStringForKey(key: "label_forgot_password"), for: .normal)
-        self.labelPopupHeading.text = Utils.returnLocalizedStringForKey(key: "label_pop_forgot_password")
-        self.textFieldPopupEmail.attributedPlaceholder = NSAttributedString(string: Utils.returnLocalizedStringForKey(key: "popup_enter_email"))
-        self.btnPopupResetPassword.setTitle(Utils.returnLocalizedStringForKey(key: "btn_reset_password"), for: .normal)
+        self.btnLogin.setTitle(Utils.returnLocalizedStringForKey("btn_login"), for: .normal)
+        self.labelForgotPassword.setTitle(Utils.returnLocalizedStringForKey("label_forgot_password"), for: .normal)
+        self.labelPopupHeading.text = Utils.returnLocalizedStringForKey("label_pop_forgot_password")
+        self.textFieldPopupEmail.attributedPlaceholder = NSAttributedString(string: Utils.returnLocalizedStringForKey("popup_enter_email"))
+        self.btnPopupResetPassword.setTitle(Utils.returnLocalizedStringForKey("btn_reset_password"), for: .normal)
         
         //Colors
         viewInner.backgroundColor = colorBlue
@@ -169,7 +169,7 @@ extension ViewController {
         }
     }
     
-    func keyboardWillBeHidden(notification: NSNotification){
+    func keyboardWillBeHidden(notification: NSNotification) {
         //Once keyboard disappears, restore original positions
         var info = notification.userInfo!
         let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size

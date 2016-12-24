@@ -95,8 +95,8 @@ class Utils: NSObject {
     }
     
     //MARK: Localized Strings
-    class func returnLocalizedStringForKey (key : String) -> String {
-        let str : String = NSString(string: key.localized(lang: userDef.value(forKey: LANGUAGE) as! String)) as String
+    class func returnLocalizedStringForKey (_ key : String) -> String {
+        let str : String = NSString(string: key.localized(userDef.value(forKey: LANGUAGE) as! String)) as String
         return str
     }
     

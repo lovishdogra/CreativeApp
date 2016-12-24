@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CVCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1245866FD9DD38BF401844C0EE0B5B3D</key>
+		<key>0774A09431B612F0951F2CE2840740A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>19EAFA8D41ADDDF9C43F5CB4B56303CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3321CC4DE887B4CA597B9DD2F2527CEF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>37DC195315707ABFF8740A5433E4DAAE</key>
+		<key>4636F198E771B2EBB8A6A2D15CCEBC84</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5AB88E8333B9568826C9AA252037278</key>
 		<dict>
 			<key>primary</key>
 			<true/>

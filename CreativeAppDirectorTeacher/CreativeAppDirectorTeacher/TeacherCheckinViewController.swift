@@ -49,12 +49,12 @@ class TeacherCheckinViewController : UIViewController {
     }
     
     @IBAction func tapConfirmCheckIn(_ sender: Any) {
-        Utils.showAlertViewOnViewController(self, title: "CreativeApp", message: Utils.returnLocalizedStringForKey(key: "message_confirm_checkin"))
+        Utils.showAlertViewOnViewController(self, title: "CreativeApp", message: Utils.returnLocalizedStringForKey("message_confirm_checkin"))
     }
     
     
     @IBAction func tapLogout(_ sender: Any) {
-        Utils.showAlertViewOnViewController(self, title: "CreativeApp" , message: Utils.returnLocalizedStringForKey(key: "message_confirm_logout"))
+        Utils.showAlertViewOnViewController(self, title: "CreativeApp" , message: Utils.returnLocalizedStringForKey("message_confirm_logout"))
     }
     
     //MARK: View Life Cycle
@@ -81,10 +81,10 @@ class TeacherCheckinViewController : UIViewController {
         btnSelectAllKidIcon.parseIcon()
         
         //Language
-        labelTeacherWelcome.text = Utils.returnLocalizedStringForKey(key: "label_teacher_welcome")
-        labelLogoutBtn.text = Utils.returnLocalizedStringForKey(key: "logout")
-        labelSelectAllKidText.text = Utils.returnLocalizedStringForKey(key: "select_all")
-        btnConfirmCheckIn.setTitle(Utils.returnLocalizedStringForKey(key: "confirm_checkin"), for: .normal)
+        labelTeacherWelcome.text = Utils.returnLocalizedStringForKey("label_teacher_welcome")
+        labelLogoutBtn.text = Utils.returnLocalizedStringForKey("logout")
+        labelSelectAllKidText.text = Utils.returnLocalizedStringForKey("select_all")
+        btnConfirmCheckIn.setTitle(Utils.returnLocalizedStringForKey("confirm_checkin"), for: .normal)
         
         //Colors
         viewHeaderTop.layer.backgroundColor = colorTopNavBarBlue.cgColor

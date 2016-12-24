@@ -10,7 +10,7 @@ import UIKit
 
 extension String {
     
-    func localized(lang:String) -> String {
+    func localized(_ lang:String) -> String {
         
         let path = Bundle.main.path(forResource: lang, ofType: "lproj")
         
