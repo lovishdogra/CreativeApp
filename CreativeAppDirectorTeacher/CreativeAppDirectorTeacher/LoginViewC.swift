@@ -45,7 +45,7 @@ class LoginViewC: UIViewController {
     //MARK: IBActions of Buttons
     @IBAction func tapLogin(_ sender: UIButton) {
         
-        userDef.set(kValueUserTypeDirector, forKey: kKeyUserType)
+        userDef.set(kValueUserTypeTeacher, forKey: kKeyUserType)
         userDef.synchronize()
         
         let strUserType = userDef.value(forKey: kKeyUserType) as! String

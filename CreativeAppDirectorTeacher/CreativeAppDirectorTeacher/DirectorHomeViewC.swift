@@ -7,29 +7,69 @@
 //
 
 import UIKit
+import SwiftIconFont
 
 class DirectorHomeViewC: UIViewController {
-
+    
+    //MARK: Declaration & IBOutlets
+        //Views
+    @IBOutlet weak var viewTopMasterContainer: UIView!
+    @IBOutlet weak var viewTopbarContainer: UIView!
+    @IBOutlet weak var collectionViewMenu: UICollectionView!
+    @IBOutlet weak var collectionViewClassName: UICollectionView!
+    @IBOutlet weak var viewContainerView: UIView!
+    
+        //Buttons
+    @IBOutlet weak var btnLogout: UIButton!
+    @IBOutlet weak var btnSelectKids: UIButton!
+    @IBOutlet weak var btnSelectStandards: UIButton!
+    
+        //Labels
+    @IBOutlet weak var labelDate: UILabel!
+    @IBOutlet weak var labelLogout: UILabel!
+    @IBOutlet weak var labelWelcomeDirector: UILabel!
+    @IBOutlet weak var labelSelectKids: UILabel!
+    
+    //MARK: IBActions
+    @IBAction func tapLogout(_ sender: Any) {
+    }
+    @IBAction func tapSelectKids(_ sender: Any) {
+    }
+    @IBAction func tapSelectStandards(_ sender: Any) {
+    }
+    
+    //MARK: Viewlife Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initialization()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: Private Methods
+    func initialization(){
+        
+        //Icons
+        btnLogout.setTitle("fa:sign-out", for: .normal)
+        btnLogout.parseIcon()
+        btnSelectKids.setTitle("fa:users", for: .normal)
+        btnSelectKids.parseIcon()
+        
+        //Button Custom Title
+        btnSelectStandards.contentVerticalAlignment = UIControlContentVerticalAlignment.center
     }
-    */
-
 }
+
+
+
+
+
+
+
+
+
+
+
+

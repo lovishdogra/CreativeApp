@@ -38,3 +38,12 @@ let colorNavBarBlue = UIColor(red: 61.0/255.0, green: 160.0/255.0, blue: 195.0/2
 //MARK: TeacherCheckinViewController
 let colorTopNavBarBlue = UIColor(red: 80.0/255.0, green: 147.0/255.0, blue: 247.0/255.0, alpha: 1.0)
 let colorLightBlue = UIColor(red: 80.0/255.0, green: 147.0/255.0, blue: 247.0/255.0, alpha: 0.8)
+
+// Teacher And Directot Menu Icons color
+let colorGrey = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
+
+
+
+
+
+
