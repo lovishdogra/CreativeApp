@@ -157,8 +157,8 @@
 			children = (
 				512A27441DE9892200B48013 /* AppDelegate.swift */,
 				212976D61DFA728900097A77 /* Models */,
-				512A27611DE98F9400B48013 /* ViewControllers */,
 				512A27601DE98F8800B48013 /* Views */,
+				512A27611DE98F9400B48013 /* Controllers */,
 				518A0DB71DE9FB1800A7FFE8 /* Language */,
 				51E648841DE9CE1C004887F9 /* Fonts */,
 				512A275F1DE98F5F00B48013 /* ReusableComponents */,
@@ -189,7 +189,7 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		512A27611DE98F9400B48013 /* ViewControllers */ = {
+		512A27611DE98F9400B48013 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				512A27461DE9892200B48013 /* ViewController.swift */,
@@ -216,7 +216,7 @@
 				2197281B1E07E211004640B1 /* DirectorMilestoneViewController.swift */,
 				2197281D1E07E292004640B1 /* DirectorCreateMealViewController.swift */,
 			);
-			name = ViewControllers;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		512A27621DE98FA100B48013 /* CoreData */ = {
