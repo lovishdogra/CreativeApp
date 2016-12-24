@@ -13,6 +13,20 @@ import UIKit
 
 let kAPIHost = "http://54.254.204.73/api/property/feeds"
 let LANGUAGE = "language"
+
+
+
+// Userdefault keys and values
+
+//Keys
+let kKeyUserType            = "userType"
+
+
+//Default Values
+let kValueUserTypeTeacher   = "Teacher"
+let kValueUserTypeDirector  = "Director"
+
+
 let userDef = UserDefaults.standard
 
 //Colors

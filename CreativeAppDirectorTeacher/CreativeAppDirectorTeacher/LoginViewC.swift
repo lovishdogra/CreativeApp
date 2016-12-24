@@ -45,6 +45,16 @@ class LoginViewC: UIViewController {
     //MARK: IBActions of Buttons
     @IBAction func tapLogin(_ sender: UIButton) {
         
+        userDef.set(kValueUserTypeDirector, forKey: kKeyUserType)
+        userDef.synchronize()
+        
+        let strUserType = userDef.value(forKey: kKeyUserType) as! String
+        
+        if strUserType == kValueUserTypeTeacher {
+        self.performSegue(withIdentifier: "segueTeacherHome", sender: nil)
+        } else {
+            self.performSegue(withIdentifier: "segueDirectorHome", sender: nil)
+        }
         
     }
     
@@ -72,6 +82,14 @@ class LoginViewC: UIViewController {
         Utils.showToastMesaage(self.viewBlackBackground, message: "Check your email", delay: 2)
     }
     
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueTeacherHome" {
+        //let teacherHomeVC = segue.destination as! TeacherHomeViewC
+        } else if segue.identifier == "segueDirectorHome" {
+        
+        }
+    }
     
     //MARK: Private Methods
     func initialization (){
@@ -79,7 +97,7 @@ class LoginViewC: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         //Keyboard Actions
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewC.dismissKeyboard))
         view.addGestureRecognizer(tap)
         registerForKeyboardNotifications()
         
@@ -138,7 +156,7 @@ class LoginViewC: UIViewController {
 
 
 //MARK: Keyboard Actions
-extension ViewController {
+extension LoginViewC {
     //KeyBoard Dismissal Function
     func registerForKeyboardNotifications(){
         //Adding notifies on keyboard appearing

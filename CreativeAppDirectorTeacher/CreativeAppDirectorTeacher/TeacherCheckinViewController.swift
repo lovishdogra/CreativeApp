@@ -56,21 +56,7 @@ class TeacherCheckinViewController : UIViewController {
     
     //MARK: Initial Methods
     func initialization(){
-        viewCollectionMenu.dataSource = self
-        viewCollectionChildren.dataSource = self
-        viewCollectionDetailBelow.dataSource = self
-        
-        //Icons
-        btnLogout.setTitle("FA:sign-out", for: .normal)
-        btnLogout.parseIcon()
-        btnSelectAllKidIcon.setTitle("FA:users", for: .normal)
-        btnSelectAllKidIcon.parseIcon()
-        
-        //Language
-        labelTeacherWelcome.text = Utils.returnLocalizedStringForKey("label_teacher_welcome")
-        labelLogoutBtn.text = Utils.returnLocalizedStringForKey("logout")
-        labelSelectAllKidText.text = Utils.returnLocalizedStringForKey("select_all")
-        btnConfirmCheckIn.setTitle(Utils.returnLocalizedStringForKey("confirm_checkin"), for: .normal)
+       
         
     }
 }

@@ -44,6 +44,10 @@
 		518A0DC81DEA0B6100A7FFE8 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518A0DC71DEA0B6100A7FFE8 /* String+Localization.swift */; };
 		51AA1B201E0E4CF100211430 /* DirectorHomeViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AA1B1F1E0E4CF100211430 /* DirectorHomeViewC.swift */; };
 		51AA1B221E0E4DBD00211430 /* TeacherHomeViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AA1B211E0E4DBD00211430 /* TeacherHomeViewC.swift */; };
+		51AA1B241E0E4F4600211430 /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AA1B231E0E4F4600211430 /* EmptySegue.swift */; };
+		51AA1B261E0E50C600211430 /* MasterDirectorViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AA1B251E0E50C600211430 /* MasterDirectorViewC.swift */; };
+		51AA1B281E0E50EE00211430 /* MasterTeacherViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AA1B271E0E50EE00211430 /* MasterTeacherViewC.swift */; };
+		51AA1B2A1E0E571600211430 /* DirectorAddChildNavC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AA1B291E0E571600211430 /* DirectorAddChildNavC.swift */; };
 		51E648791DE9C7D4004887F9 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E648781DE9C7D4004887F9 /* Singleton.swift */; };
 		51E6487F1DE9CE13004887F9 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51E6487A1DE9CE13004887F9 /* Roboto-Black.ttf */; };
 		51E648801DE9CE13004887F9 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51E6487B1DE9CE13004887F9 /* Roboto-Bold.ttf */; };
@@ -98,6 +102,10 @@
 		518A0DC71DEA0B6100A7FFE8 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		51AA1B1F1E0E4CF100211430 /* DirectorHomeViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorHomeViewC.swift; sourceTree = "<group>"; };
 		51AA1B211E0E4DBD00211430 /* TeacherHomeViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherHomeViewC.swift; sourceTree = "<group>"; };
+		51AA1B231E0E4F4600211430 /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
+		51AA1B251E0E50C600211430 /* MasterDirectorViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterDirectorViewC.swift; sourceTree = "<group>"; };
+		51AA1B271E0E50EE00211430 /* MasterTeacherViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTeacherViewC.swift; sourceTree = "<group>"; };
+		51AA1B291E0E571600211430 /* DirectorAddChildNavC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorAddChildNavC.swift; sourceTree = "<group>"; };
 		51E648781DE9C7D4004887F9 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		51E6487A1DE9CE13004887F9 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "Fonts/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		51E6487B1DE9CE13004887F9 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -189,6 +197,7 @@
 			children = (
 				512A27481DE9892200B48013 /* Main.storyboard */,
 				512A27501DE9892200B48013 /* LaunchScreen.storyboard */,
+				51AA1B231E0E4F4600211430 /* EmptySegue.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -197,6 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				512A27461DE9892200B48013 /* LoginViewC.swift */,
+				51AA1B1F1E0E4CF100211430 /* DirectorHomeViewC.swift */,
+				51AA1B211E0E4DBD00211430 /* TeacherHomeViewC.swift */,
+				51AA1B251E0E50C600211430 /* MasterDirectorViewC.swift */,
+				51AA1B271E0E50EE00211430 /* MasterTeacherViewC.swift */,
 				215A94811DF940ED00947A78 /* TeacherCheckinViewController.swift */,
 				212976D71DFA836E00097A77 /* TeacherDailyReportViewController.swift */,
 				21FA1B081DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift */,
@@ -219,8 +232,7 @@
 				219728191E07E1FB004640B1 /* DirectorPaymentViewController.swift */,
 				2197281B1E07E211004640B1 /* DirectorMilestoneViewController.swift */,
 				2197281D1E07E292004640B1 /* DirectorCreateMealViewController.swift */,
-				51AA1B1F1E0E4CF100211430 /* DirectorHomeViewC.swift */,
-				51AA1B211E0E4DBD00211430 /* TeacherHomeViewC.swift */,
+				51AA1B291E0E571600211430 /* DirectorAddChildNavC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -397,11 +409,13 @@
 				210CEB721DFFDFA8001A4A2A /* DirectorCheckinViewController.swift in Sources */,
 				2197281C1E07E211004640B1 /* DirectorMilestoneViewController.swift in Sources */,
 				215A94821DF940ED00947A78 /* TeacherCheckinViewController.swift in Sources */,
+				51AA1B241E0E4F4600211430 /* EmptySegue.swift in Sources */,
 				219728121E07E135004640B1 /* DirectorCreateLevelViewController.swift in Sources */,
 				210CEB6C1DFFBA1C001A4A2A /* DirectorChildPhotoViewController.swift in Sources */,
 				2197280C1E07C499004640B1 /* DirectorCreateEventViewController.swift in Sources */,
 				219728101E07CF27004640B1 /* DirectorManageClassViewController.swift in Sources */,
 				2197280E1E07CA82004640B1 /* DirectorTrackPaymentViewController.swift in Sources */,
+				51AA1B281E0E50EE00211430 /* MasterTeacherViewC.swift in Sources */,
 				210CEB6E1DFFBAF7001A4A2A /* DirectorCreateDailyReportViewController.swift in Sources */,
 				21FA1B091DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift in Sources */,
 				219728161E07E1D8004640B1 /* DirectorAddChildViewController.swift in Sources */,
@@ -411,6 +425,7 @@
 				512A275D1DE98BFB00B48013 /* Utils.swift in Sources */,
 				2197280A1E07BE3C004640B1 /* DirectorProfileViewController.swift in Sources */,
 				2197281E1E07E292004640B1 /* DirectorCreateMealViewController.swift in Sources */,
+				51AA1B261E0E50C600211430 /* MasterDirectorViewC.swift in Sources */,
 				21FA1B0B1DFE16FE0073AD87 /* TeacherProfileViewController.swift in Sources */,
 				512A27471DE9892200B48013 /* LoginViewC.swift in Sources */,
 				219728141E07E14A004640B1 /* DirectorCreateClassViewController.swift in Sources */,
@@ -425,6 +440,7 @@
 				512A275C1DE98BFB00B48013 /* Define.swift in Sources */,
 				512A27451DE9892200B48013 /* AppDelegate.swift in Sources */,
 				518A0DC81DEA0B6100A7FFE8 /* String+Localization.swift in Sources */,
+				51AA1B2A1E0E571600211430 /* DirectorAddChildNavC.swift in Sources */,
 				212976D81DFA836E00097A77 /* TeacherDailyReportViewController.swift in Sources */,
 				51AA1B221E0E4DBD00211430 /* TeacherHomeViewC.swift in Sources */,
 				21FA1B071DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift in Sources */,
