@@ -13,40 +13,23 @@ class TeacherCheckinViewController : UIViewController {
 
     //MARK: Declaration & IBOutlets
         //Views
-    @IBOutlet var viewContainerMaster: UIView!
-    @IBOutlet weak var viewHeaderTop: UIView!
-    @IBOutlet weak var viewImageClassTopContainer: UIView!
-    @IBOutlet weak var viewHeaderBottom: UIView!
-    @IBOutlet weak var ViewBottomContainer: UIView!
-    @IBOutlet weak var viewBottomCollectionContainer: UIView!
+    @IBOutlet weak var viewMasterContainer: UIView!
+    @IBOutlet weak var viewTopbarContainer: UIView!
+    @IBOutlet weak var viewBottomContainer: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
         //Labels
-    @IBOutlet weak var labelDateDay: UILabel!
-    @IBOutlet weak var labelTeacherWelcome: UILabel!
-    @IBOutlet weak var labelLogoutBtn: UILabel!
-    @IBOutlet weak var labelClassName: UILabel!
-    @IBOutlet weak var labelSelectAllKidText: UILabel!
-    
+    @IBOutlet weak var labelSelectedKids: UILabel!
     
         //Buttons
-    @IBOutlet weak var btnLogout: UIButton!
-    @IBOutlet weak var btnSelectAllKidIcon: UIButton!
-    @IBOutlet weak var btnConfirmCheckIn: UIButton!
-    
-    
-    
-        //Images
-    @IBOutlet weak var imageViewClassIconTop: UIImageView!
-    
-    
-        //Collections
-    @IBOutlet var viewCollectionMenu: UICollectionView!
-    @IBOutlet var viewCollectionChildren: UICollectionView!
-    @IBOutlet var viewCollectionDetailBelow: UICollectionView!
+    @IBOutlet weak var btnConfirmCheckin: UIButton!
+    @IBOutlet weak var btnKidsDisplay: UIButton!
+   
     
     //MARK: IBActions of Buttons
-    @IBAction func tapSelectAllKids(_ sender: Any) {
+    @IBAction func tapConfirmCheckin(_ sender: Any) {
     }
+<<<<<<< HEAD
     
     @IBAction func tapConfirmCheckIn(_ sender: Any) {
         Utils.showAlertViewOnViewController(self, title: "CreativeApp", message: Utils.returnLocalizedStringForKey("message_confirm_checkin"))
@@ -56,6 +39,12 @@ class TeacherCheckinViewController : UIViewController {
     @IBAction func tapLogout(_ sender: Any) {
         Utils.showAlertViewOnViewController(self, title: "CreativeApp" , message: Utils.returnLocalizedStringForKey("message_confirm_logout"))
     }
+=======
+    @IBAction func tapKidDisplay(_ sender: Any) {
+    }
+    
+    
+>>>>>>> 48b2e7f4c4a88bafa4efefb521ddac3051c8f6b0
     
     //MARK: View Life Cycle
     override func viewDidLoad() {
@@ -70,6 +59,7 @@ class TeacherCheckinViewController : UIViewController {
     
     //MARK: Initial Methods
     func initialization(){
+<<<<<<< HEAD
         viewCollectionMenu.dataSource = self
         viewCollectionChildren.dataSource = self
         viewCollectionDetailBelow.dataSource = self
@@ -85,50 +75,9 @@ class TeacherCheckinViewController : UIViewController {
         labelLogoutBtn.text = Utils.returnLocalizedStringForKey("logout")
         labelSelectAllKidText.text = Utils.returnLocalizedStringForKey("select_all")
         btnConfirmCheckIn.setTitle(Utils.returnLocalizedStringForKey("confirm_checkin"), for: .normal)
-        
-        //Colors
-        viewHeaderTop.layer.backgroundColor = colorTopNavBarBlue.cgColor
-        viewImageClassTopContainer.layer.backgroundColor = colorLightBlue.cgColor
-        btnSelectAllKidIcon.setTitleColor(colorLightBlue, for: .normal)
+=======
+>>>>>>> 48b2e7f4c4a88bafa4efefb521ddac3051c8f6b0
         
         
     }
-}
-
-//MARK: Collection View Extension
-extension TeacherCheckinViewController : UICollectionViewDelegate, UICollectionViewDataSource{
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if collectionView == viewCollectionMenu {
-            return 1
-        } else if collectionView == viewCollectionChildren {
-            return 1
-        } else {
-            return 1
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == viewCollectionMenu {
-            return 20
-        } else if collectionView == viewCollectionChildren {
-            return 40
-        } else{
-            return 50
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == viewCollectionMenu {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath)
-            return cell
-        } else if collectionView == viewCollectionChildren {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChildrenCell", for: indexPath)
-            return cell
-        } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChildrenDetailCell", for: indexPath)
-            return cell
-        }
-    }
-    
 }
