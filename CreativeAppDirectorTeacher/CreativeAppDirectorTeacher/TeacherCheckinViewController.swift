@@ -29,7 +29,6 @@ class TeacherCheckinViewController : UIViewController {
     //MARK: IBActions of Buttons
     @IBAction func tapConfirmCheckin(_ sender: Any) {
     }
-<<<<<<< HEAD
     
     @IBAction func tapConfirmCheckIn(_ sender: Any) {
         Utils.showAlertViewOnViewController(self, title: "CreativeApp", message: Utils.returnLocalizedStringForKey("message_confirm_checkin"))
@@ -39,12 +38,10 @@ class TeacherCheckinViewController : UIViewController {
     @IBAction func tapLogout(_ sender: Any) {
         Utils.showAlertViewOnViewController(self, title: "CreativeApp" , message: Utils.returnLocalizedStringForKey("message_confirm_logout"))
     }
-=======
     @IBAction func tapKidDisplay(_ sender: Any) {
     }
     
     
->>>>>>> 48b2e7f4c4a88bafa4efefb521ddac3051c8f6b0
     
     //MARK: View Life Cycle
     override func viewDidLoad() {
@@ -59,7 +56,6 @@ class TeacherCheckinViewController : UIViewController {
     
     //MARK: Initial Methods
     func initialization(){
-<<<<<<< HEAD
         viewCollectionMenu.dataSource = self
         viewCollectionChildren.dataSource = self
         viewCollectionDetailBelow.dataSource = self
@@ -75,9 +71,6 @@ class TeacherCheckinViewController : UIViewController {
         labelLogoutBtn.text = Utils.returnLocalizedStringForKey("logout")
         labelSelectAllKidText.text = Utils.returnLocalizedStringForKey("select_all")
         btnConfirmCheckIn.setTitle(Utils.returnLocalizedStringForKey("confirm_checkin"), for: .normal)
-=======
->>>>>>> 48b2e7f4c4a88bafa4efefb521ddac3051c8f6b0
-        
         
     }
 }

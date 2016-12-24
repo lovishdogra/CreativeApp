@@ -10,7 +10,7 @@ import UIKit
 import SwiftIconFont
 
 
-class ViewController: UIViewController {
+class LoginViewC: UIViewController {
 
     //MARK: Properties and IBOutlets
     @IBOutlet var imageViewSchool: UIImageView!
