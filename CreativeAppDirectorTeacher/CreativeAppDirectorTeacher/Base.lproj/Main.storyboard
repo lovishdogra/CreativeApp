@@ -4496,7 +4496,7 @@
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="383"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pKp-eN-UuE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pKp-eN-UuE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -7186,6 +7186,10 @@
         <scene sceneID="IXs-g1-d62">
             <objects>
                 <viewController storyboardIdentifier="MasterTeacherViewC" id="rX9-mU-Wm8" customClass="MasterTeacherViewC" customModule="CreativeAppDirectorTeacher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i2i-jc-45O"/>
+                        <viewControllerLayoutGuide type="bottom" id="wHZ-Wj-r27"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KD6-uu-evc">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="495"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7208,6 +7212,10 @@
         <scene sceneID="d89-TS-c03">
             <objects>
                 <viewController storyboardIdentifier="MasterDirectorViewC" id="Cgs-4s-59D" customClass="MasterDirectorViewC" customModule="CreativeAppDirectorTeacher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JTd-Vw-hjP"/>
+                        <viewControllerLayoutGuide type="bottom" id="fYS-Fz-6Jy"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uue-Fi-VSN">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7231,6 +7239,10 @@
         <scene sceneID="8hE-G3-CJy">
             <objects>
                 <viewController id="HLW-fL-car" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sQP-LP-xfI"/>
+                        <viewControllerLayoutGuide type="bottom" id="5vO-8h-MYv"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gIz-1e-ZLk">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="399"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

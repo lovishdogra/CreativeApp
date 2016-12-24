@@ -207,8 +207,8 @@
 			children = (
 				512A27461DE9892200B48013 /* LoginViewC.swift */,
 				51AA1B1F1E0E4CF100211430 /* DirectorHomeViewC.swift */,
-				51AA1B211E0E4DBD00211430 /* TeacherHomeViewC.swift */,
 				51AA1B251E0E50C600211430 /* MasterDirectorViewC.swift */,
+				51AA1B211E0E4DBD00211430 /* TeacherHomeViewC.swift */,
 				51AA1B271E0E50EE00211430 /* MasterTeacherViewC.swift */,
 				215A94811DF940ED00947A78 /* TeacherCheckinViewController.swift */,
 				212976D71DFA836E00097A77 /* TeacherDailyReportViewController.swift */,

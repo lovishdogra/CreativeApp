@@ -10,24 +10,22 @@ import Foundation
 import UIKit
 
 
-
 let kAPIHost = "http://54.254.204.73/api/property/feeds"
 let LANGUAGE = "language"
 
 
 
 // Userdefault keys and values
-
-//Keys
+let userDef = UserDefaults.standard
+// Keys
 let kKeyUserType            = "userType"
 
 
-//Default Values
+// Default Values
 let kValueUserTypeTeacher   = "Teacher"
 let kValueUserTypeDirector  = "Director"
 
 
-let userDef = UserDefaults.standard
 
 //Colors
 let colorBlue = UIColor(red:22.0/255.0, green:158.0/255.0, blue:288.0/255.0, alpha:1.0)

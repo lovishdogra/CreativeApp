@@ -9,7 +9,13 @@
 import UIKit
 
 class MasterDirectorViewC: UIViewController {
+    
+    var currentViewController : UIViewController!
+    var previousViewController : UIViewController!
+    var identifierName: String = ""
 
+    
+    //MARK: Viewlifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +28,39 @@ class MasterDirectorViewC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    //MARK: Private method for managing the various view contollers
+    func segueIndetifierReceivedFromParent(string: String){
+        
+        if string == ""{
+            self.performSegue(withIdentifier: "", sender: nil)
+        } else if string == "" {
+            self.performSegue(withIdentifier: "", sender: nil)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        }
+        
     }
-    */
+    
+    
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if self.previousViewController != nil {
+            self.previousViewController.removeFromParentViewController()
+        }
+        
+        self.currentViewController = segue.destination as UIViewController
+        self.addChildViewController(self.currentViewController)
+        self.currentViewController.view.frame = self.view.frame
+        self.view.addSubview(self.currentViewController.view)
+        
+        // After setting up the current view controller just notifiy the current view controller
+        self.didMove(toParentViewController: self.currentViewController)
+        
+        self.previousViewController = self.currentViewController
+        
+        
+    }
+    
 
 }
