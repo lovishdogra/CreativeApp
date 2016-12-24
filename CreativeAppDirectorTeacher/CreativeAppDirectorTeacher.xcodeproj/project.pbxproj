@@ -32,7 +32,7 @@
 		21FA1B091DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA1B081DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift */; };
 		21FA1B0B1DFE16FE0073AD87 /* TeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA1B0A1DFE16FE0073AD87 /* TeacherProfileViewController.swift */; };
 		512A27451DE9892200B48013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A27441DE9892200B48013 /* AppDelegate.swift */; };
-		512A27471DE9892200B48013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A27461DE9892200B48013 /* ViewController.swift */; };
+		512A27471DE9892200B48013 /* LoginViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A27461DE9892200B48013 /* LoginViewC.swift */; };
 		512A274A1DE9892200B48013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512A27481DE9892200B48013 /* Main.storyboard */; };
 		512A274D1DE9892200B48013 /* CreativeAppDirectorTeacher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 512A274B1DE9892200B48013 /* CreativeAppDirectorTeacher.xcdatamodeld */; };
 		512A274F1DE9892200B48013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 512A274E1DE9892200B48013 /* Assets.xcassets */; };
@@ -42,6 +42,8 @@
 		512A275E1DE98BFB00B48013 /* WebConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A275B1DE98BFB00B48013 /* WebConnection.swift */; };
 		518A0DC21DEA095C00A7FFE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 518A0DC41DEA095C00A7FFE8 /* Localizable.strings */; };
 		518A0DC81DEA0B6100A7FFE8 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518A0DC71DEA0B6100A7FFE8 /* String+Localization.swift */; };
+		51AA1B201E0E4CF100211430 /* DirectorHomeViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AA1B1F1E0E4CF100211430 /* DirectorHomeViewC.swift */; };
+		51AA1B221E0E4DBD00211430 /* TeacherHomeViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AA1B211E0E4DBD00211430 /* TeacherHomeViewC.swift */; };
 		51E648791DE9C7D4004887F9 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E648781DE9C7D4004887F9 /* Singleton.swift */; };
 		51E6487F1DE9CE13004887F9 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51E6487A1DE9CE13004887F9 /* Roboto-Black.ttf */; };
 		51E648801DE9CE13004887F9 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51E6487B1DE9CE13004887F9 /* Roboto-Bold.ttf */; };
@@ -79,7 +81,7 @@
 		31FE7B28A0BE0F884A033E44 /* Pods-CreativeAppDirectorTeacher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreativeAppDirectorTeacher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CreativeAppDirectorTeacher/Pods-CreativeAppDirectorTeacher.debug.xcconfig"; sourceTree = "<group>"; };
 		512A27411DE9892200B48013 /* CreativeAppDirectorTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreativeAppDirectorTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		512A27441DE9892200B48013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		512A27461DE9892200B48013 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		512A27461DE9892200B48013 /* LoginViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewC.swift; sourceTree = "<group>"; };
 		512A27491DE9892200B48013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		512A274C1DE9892200B48013 /* CreativeAppDirectorTeacher.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CreativeAppDirectorTeacher.xcdatamodel; sourceTree = "<group>"; };
 		512A274E1DE9892200B48013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +96,8 @@
 		518A0DC51DEA096200A7FFE8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		518A0DC61DEA096500A7FFE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		518A0DC71DEA0B6100A7FFE8 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		51AA1B1F1E0E4CF100211430 /* DirectorHomeViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorHomeViewC.swift; sourceTree = "<group>"; };
+		51AA1B211E0E4DBD00211430 /* TeacherHomeViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherHomeViewC.swift; sourceTree = "<group>"; };
 		51E648781DE9C7D4004887F9 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		51E6487A1DE9CE13004887F9 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "Fonts/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		51E6487B1DE9CE13004887F9 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -157,8 +161,8 @@
 			children = (
 				512A27441DE9892200B48013 /* AppDelegate.swift */,
 				212976D61DFA728900097A77 /* Models */,
-				512A27611DE98F9400B48013 /* ViewControllers */,
 				512A27601DE98F8800B48013 /* Views */,
+				512A27611DE98F9400B48013 /* Controllers */,
 				518A0DB71DE9FB1800A7FFE8 /* Language */,
 				51E648841DE9CE1C004887F9 /* Fonts */,
 				512A275F1DE98F5F00B48013 /* ReusableComponents */,
@@ -189,10 +193,10 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		512A27611DE98F9400B48013 /* ViewControllers */ = {
+		512A27611DE98F9400B48013 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				512A27461DE9892200B48013 /* ViewController.swift */,
+				512A27461DE9892200B48013 /* LoginViewC.swift */,
 				215A94811DF940ED00947A78 /* TeacherCheckinViewController.swift */,
 				212976D71DFA836E00097A77 /* TeacherDailyReportViewController.swift */,
 				21FA1B081DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift */,
@@ -215,8 +219,10 @@
 				219728191E07E1FB004640B1 /* DirectorPaymentViewController.swift */,
 				2197281B1E07E211004640B1 /* DirectorMilestoneViewController.swift */,
 				2197281D1E07E292004640B1 /* DirectorCreateMealViewController.swift */,
+				51AA1B1F1E0E4CF100211430 /* DirectorHomeViewC.swift */,
+				51AA1B211E0E4DBD00211430 /* TeacherHomeViewC.swift */,
 			);
-			name = ViewControllers;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		512A27621DE98FA100B48013 /* CoreData */ = {
@@ -292,7 +298,7 @@
 					512A27401DE9892100B48013 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = FX6C5866MT;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -348,7 +354,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6C4B6D3E452277511F44FBBB /* [CP] Copy Pods Resources */ = {
@@ -406,9 +412,10 @@
 				2197280A1E07BE3C004640B1 /* DirectorProfileViewController.swift in Sources */,
 				2197281E1E07E292004640B1 /* DirectorCreateMealViewController.swift in Sources */,
 				21FA1B0B1DFE16FE0073AD87 /* TeacherProfileViewController.swift in Sources */,
-				512A27471DE9892200B48013 /* ViewController.swift in Sources */,
+				512A27471DE9892200B48013 /* LoginViewC.swift in Sources */,
 				219728141E07E14A004640B1 /* DirectorCreateClassViewController.swift in Sources */,
 				21FA1B051DFE0B130073AD87 /* TeacherCreateEventViewController.swift in Sources */,
+				51AA1B201E0E4CF100211430 /* DirectorHomeViewC.swift in Sources */,
 				212015CA1DFEA9D300277CFB /* CustomTableViewCell.swift in Sources */,
 				210CEB741DFFE9E7001A4A2A /* DirectorTrackMilestoneViewController.swift in Sources */,
 				512A274D1DE9892200B48013 /* CreativeAppDirectorTeacher.xcdatamodeld in Sources */,
@@ -419,6 +426,7 @@
 				512A27451DE9892200B48013 /* AppDelegate.swift in Sources */,
 				518A0DC81DEA0B6100A7FFE8 /* String+Localization.swift in Sources */,
 				212976D81DFA836E00097A77 /* TeacherDailyReportViewController.swift in Sources */,
+				51AA1B221E0E4DBD00211430 /* TeacherHomeViewC.swift in Sources */,
 				21FA1B071DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

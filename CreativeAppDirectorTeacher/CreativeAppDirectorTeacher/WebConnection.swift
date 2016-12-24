@@ -186,7 +186,7 @@ class WebConnection: NSObject {
         }
     }
     
-    class func callUploadImageAtUrl(urlString:String,withArrayOfImages:[UIImage],completionHandler : @escaping (NSDictionary?, NSError?) -> Void){
+    class func callUploadImageAtUrl(_ urlString:String,withArrayOfImages:[UIImage],completionHandler : @escaping (NSDictionary?, NSError?) -> Void){
         
         //  let finalString = String(format: "%@%@", arguments: [kAPIHost,urlString])
         //   let strServerUrl:NSURL = NSURL(string: finalString)!
@@ -232,7 +232,7 @@ class WebConnection: NSObject {
         
     }
     
-    class  func callUploadVideoAtUrl(urlString:String,withArrayOfVideoUrls:[NSURL],withParams:Dictionary<String, AnyObject>?, completionHandler : @escaping (NSDictionary?, NSError?,Double,Bool) -> Void){
+    class  func callUploadVideoAtUrl(_ urlString:String,withArrayOfVideoUrls:[URL],withParams:Dictionary<String, AnyObject>?, completionHandler : @escaping (NSDictionary?, NSError?,Double,Bool) -> Void){
         
         let finalString = String(format: "%@%@", arguments: [kAPIHost,urlString])
         
