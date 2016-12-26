@@ -39,6 +39,9 @@ class DirectorAddChildViewController: UIViewController {
     
     //MARK: IBActions
     @IBAction func tapNext(_ sender: Any) {
+//        let obj = self.storyboard?.instantiateViewController(withIdentifier: "DirectorAddChild2ViewController") as! DirectorAddChild2ViewController
+//        
+//        self.navigationController?.pushViewController(obj, animated: true)
     }
     
     //MARK: ViewLife Methods
@@ -46,6 +49,11 @@ class DirectorAddChildViewController: UIViewController {
         super.viewDidLoad()
         initialization()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

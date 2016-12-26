@@ -12,7 +12,6 @@ class MasterDirectorViewC: UIViewController {
     
     var currentViewController : UIViewController!
     var previousViewController : UIViewController!
-    var identifierName: String = ""
 
     
     //MARK: Viewlifecycle Methods
@@ -30,21 +29,16 @@ class MasterDirectorViewC: UIViewController {
 
     //MARK: Private method for managing the various view contollers
     func segueIndetifierReceivedFromParent(string: String){
-        
-        if string == ""{
-            self.performSegue(withIdentifier: "", sender: nil)
-        } else if string == "" {
-            self.performSegue(withIdentifier: "", sender: nil)
-
-        }
-        
+        print(string)
+            self.performSegue(withIdentifier: string, sender: nil)
     }
     
     
-    // MARK: - Navigation
+    // MARK: - Navigationte
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if self.previousViewController != nil {
+            self.previousViewController.view.removeFromSuperview()
             self.previousViewController.removeFromParentViewController()
         }
         
@@ -52,7 +46,8 @@ class MasterDirectorViewC: UIViewController {
         self.addChildViewController(self.currentViewController)
         self.currentViewController.view.frame = self.view.frame
         self.view.addSubview(self.currentViewController.view)
-        
+        self.currentViewController.view.clipsToBounds = true
+
         // After setting up the current view controller just notifiy the current view controller
         self.didMove(toParentViewController: self.currentViewController)
         

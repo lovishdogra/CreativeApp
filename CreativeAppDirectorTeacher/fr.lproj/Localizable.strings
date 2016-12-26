@@ -54,6 +54,9 @@
 "send_to" = "Send to";
 "edit" = "Edit";
 "create" = "Create";
+"logout_confirmation" = "Are you sure to logout ?";
+"ok" = "Ok";
+"cancel" = "Cancel";
 
 //Top Menu Bar (Teacher/Director)
 "label_teacher_welcome" = "Hey Teacher, Welcome to Creative App";

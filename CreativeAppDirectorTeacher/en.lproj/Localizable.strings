@@ -54,6 +54,9 @@
 "send_to" = "Send to";
 "edit" = "Edit";
 "create" = "Create";
+"logout_confirmation" = "Are you sure to logout ?";
+"ok" = "Ok";
+"cancel" = "Cancel";
 
 //Top Menu Bar (Teacher/Director)
 "label_teacher_welcome" = "Hey Teacher, Welcome to Creative App";
@@ -112,13 +115,13 @@
 "spl_note" = "Special Notes";
 
 //Director Manage Class
-"create_level" = "Create Level";
-"create_class" = "Create Class";
+"create_level" = "Manage Level";
+"create_class" = "Manage Class";
 "add_child" = "Add Child";
 "move_child" = "Move Child";
 "payment" = "Payment";
 "milestone" = "Milestones";
-"create_meal" = "Create Meal";
+"create_meal" = "Manage Meal";
 
 //Director Manage Create Level
 "upload_icon" = "Upload Icon";

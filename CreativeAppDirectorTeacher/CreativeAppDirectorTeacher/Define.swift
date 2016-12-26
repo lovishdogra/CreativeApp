@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 
+
+let kAppName = "CreativeApp"
+
 let kAPIHost = "http://54.254.204.73/api/property/feeds"
 let LANGUAGE = "language"
 
@@ -19,6 +22,10 @@ let LANGUAGE = "language"
 let userDef = UserDefaults.standard
 // Keys
 let kKeyUserType            = "userType"
+let kKeyUserId              = "userId"
+let kKeyClassId             = "userClassId"
+
+
 
 
 // Default Values

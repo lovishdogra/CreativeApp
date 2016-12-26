@@ -46,6 +46,9 @@ class DirectorAddChild2ViewController: UIViewController {
     
     //MARK: IBActions
     @IBAction func tapBack(_ sender: Any) {
+        
+        //self.navigationController?.popViewController(animated: true)
+        
     }
     @IBAction func tapSave(_ sender: Any) {
     }
@@ -59,6 +62,11 @@ class DirectorAddChild2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialization()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.isNavigationBarHidden = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

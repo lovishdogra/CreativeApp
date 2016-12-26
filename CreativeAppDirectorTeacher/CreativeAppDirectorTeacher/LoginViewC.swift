@@ -45,6 +45,8 @@ class LoginViewC: UIViewController {
     //MARK: IBActions of Buttons
     @IBAction func tapLogin(_ sender: UIButton) {
         
+        //kValueUserTypeTeacher
+        //kValueUserTypeDirector
         userDef.set(kValueUserTypeTeacher, forKey: kKeyUserType)
         userDef.synchronize()
         
@@ -59,13 +61,26 @@ class LoginViewC: UIViewController {
     }
     
     @IBAction func tapForgotPassword(_ sender: Any) {
-        viewBlackBackground.isHidden = false
+        
+        
+        userDef.set(kValueUserTypeDirector, forKey: kKeyUserType)
+        userDef.synchronize()
+        
+        let strUserType = userDef.value(forKey: kKeyUserType) as! String
+        
+        if strUserType == kValueUserTypeTeacher {
+            self.performSegue(withIdentifier: "segueTeacherHome", sender: nil)
+        } else {
+            self.performSegue(withIdentifier: "segueDirectorHome", sender: nil)
+        }
+        
+       /* viewBlackBackground.isHidden = false
         viewPopupForgot.isHidden = false
         viewPopupHeading.isHidden = false
         labelPopupHeading.isHidden = false
         btnPopupClose.isHidden = false
         textFieldPopupEmail.isHidden = false
-        btnPopupResetPassword.isHidden = false
+        btnPopupResetPassword.isHidden = false*/
     }
     
     @IBAction func tapPopupClose(_ sender: Any) {

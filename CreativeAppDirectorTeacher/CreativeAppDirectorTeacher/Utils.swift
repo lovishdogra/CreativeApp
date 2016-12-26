@@ -85,6 +85,29 @@ class Utils: NSObject {
         }
     }
     
+    
+    class func showOkCancelAlertViewOnViewController(_ viewC : UIViewController,title: String, message: String, okClickResult: @escaping (_ index: Int,_ action: UIAlertController)->(),cancelClickResult: @escaping (_ index:Int, _ action: UIAlertController)->()){
+        
+        let alert : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction : UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default) { (action: UIAlertAction) -> Void in
+            okClickResult(0,alert)
+
+        }
+        
+        let cancelAction : UIAlertAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default) { (action: UIAlertAction) -> Void in
+            cancelClickResult(0,alert)
+        }
+        
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+
+        viewC.present(alert, animated: true) { () -> Void in
+        }
+    }
+    
+    
+    
     //MARK: CreateTopStatusBar
     class func createTopStatusBarOnView(_ view:UIView) -> UIView {
     let statusBarView  = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 20))

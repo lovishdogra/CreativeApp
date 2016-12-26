@@ -12,9 +12,7 @@ class MasterTeacherViewC: UIViewController {
     
     var currentViewController : UIViewController!
     var previousViewController : UIViewController!
-    let segueIdentifier : String = ""
 
-    
 
     //MARK: - View Life Cycle Methods
     override func viewDidLoad() {
@@ -28,12 +26,9 @@ class MasterTeacherViewC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func segueIdentifierReceivedFromParent(segueIdentifier : String) {
-        if segueIdentifier == "" {
-        
-        } else if segueIdentifier == "" {
-        
-        }
+    //MARK: - Private Methods
+    func segueIndetifierReceivedFromParent(string : String) {
+       self.performSegue(withIdentifier: string, sender: nil)
     }
     
 
@@ -43,11 +38,13 @@ class MasterTeacherViewC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if self.previousViewController != nil {
+            self.previousViewController.view.removeFromSuperview()
             self.previousViewController.removeFromParentViewController()
         }
         
         self.currentViewController = segue.destination as UIViewController
         self.currentViewController.view.frame = self.view.frame
+        self.currentViewController.view.clipsToBounds = true
         self.addChildViewController(self.currentViewController)
         self.view.addSubview(self.currentViewController.view)
         

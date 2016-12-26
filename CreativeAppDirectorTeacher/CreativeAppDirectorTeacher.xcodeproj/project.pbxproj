@@ -40,6 +40,7 @@
 		512A275C1DE98BFB00B48013 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A27591DE98BFB00B48013 /* Define.swift */; };
 		512A275D1DE98BFB00B48013 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A275A1DE98BFB00B48013 /* Utils.swift */; };
 		512A275E1DE98BFB00B48013 /* WebConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A275B1DE98BFB00B48013 /* WebConnection.swift */; };
+		517419DE1E10E6AD00AF3CB4 /* MasterDirectorManageViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517419DD1E10E6AD00AF3CB4 /* MasterDirectorManageViewC.swift */; };
 		518A0DC21DEA095C00A7FFE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 518A0DC41DEA095C00A7FFE8 /* Localizable.strings */; };
 		518A0DC81DEA0B6100A7FFE8 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518A0DC71DEA0B6100A7FFE8 /* String+Localization.swift */; };
 		51AA1B201E0E4CF100211430 /* DirectorHomeViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AA1B1F1E0E4CF100211430 /* DirectorHomeViewC.swift */; };
@@ -94,6 +95,7 @@
 		512A27591DE98BFB00B48013 /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		512A275A1DE98BFB00B48013 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		512A275B1DE98BFB00B48013 /* WebConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebConnection.swift; sourceTree = "<group>"; };
+		517419DD1E10E6AD00AF3CB4 /* MasterDirectorManageViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterDirectorManageViewC.swift; sourceTree = "<group>"; };
 		518A0DBE1DEA087200A7FFE8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		518A0DBF1DEA087200A7FFE8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		518A0DC31DEA095C00A7FFE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				512A27461DE9892200B48013 /* LoginViewC.swift */,
 				51AA1B1F1E0E4CF100211430 /* DirectorHomeViewC.swift */,
 				51AA1B251E0E50C600211430 /* MasterDirectorViewC.swift */,
+				517419DD1E10E6AD00AF3CB4 /* MasterDirectorManageViewC.swift */,
 				51AA1B211E0E4DBD00211430 /* TeacherHomeViewC.swift */,
 				51AA1B271E0E50EE00211430 /* MasterTeacherViewC.swift */,
 				215A94811DF940ED00947A78 /* TeacherCheckinViewController.swift */,
@@ -412,6 +415,7 @@
 				51AA1B241E0E4F4600211430 /* EmptySegue.swift in Sources */,
 				219728121E07E135004640B1 /* DirectorCreateLevelViewController.swift in Sources */,
 				210CEB6C1DFFBA1C001A4A2A /* DirectorChildPhotoViewController.swift in Sources */,
+				517419DE1E10E6AD00AF3CB4 /* MasterDirectorManageViewC.swift in Sources */,
 				2197280C1E07C499004640B1 /* DirectorCreateEventViewController.swift in Sources */,
 				219728101E07CF27004640B1 /* DirectorManageClassViewController.swift in Sources */,
 				2197280E1E07CA82004640B1 /* DirectorTrackPaymentViewController.swift in Sources */,
