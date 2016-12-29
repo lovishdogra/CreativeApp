@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftIconFont
 
 class DirectorAddChild2ViewController: UIViewController {
     
@@ -24,6 +25,9 @@ class DirectorAddChild2ViewController: UIViewController {
     @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var btnCancelGaurdian: UIButton!
     @IBOutlet weak var btnSaveGaurdian: UIButton!
+    @IBOutlet weak var btnChildCareIcon: UIButton!
+    @IBOutlet weak var btnMealPlanIcon: UIButton!
+    @IBOutlet weak var btnTransportPlanIcon: UIButton!
     
         //Text
     @IBOutlet weak var textFieldEnterNamer: UITextField!
@@ -39,15 +43,11 @@ class DirectorAddChild2ViewController: UIViewController {
     
         //Images
     @IBOutlet weak var imageViewChild: UIImageView!
-    @IBOutlet weak var imageViewChildCareIcon: UIImageView!
-    @IBOutlet weak var imageViewMealIcon: UIImageView!
-    @IBOutlet weak var imageViewTransportIcon: UIImageView!
     @IBOutlet weak var imageViewGuardian: UIImageView!
     
     //MARK: IBActions
     @IBAction func tapBack(_ sender: Any) {
         
-        //self.navigationController?.popViewController(animated: true)
         
     }
     @IBAction func tapSave(_ sender: Any) {
@@ -67,6 +67,14 @@ class DirectorAddChild2ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.isNavigationBarHidden = true
+    
+        //Icons
+        btnChildCareIcon.setTitle("ma:child.care", for: .normal)
+        btnChildCareIcon.parseIcon()
+        btnMealPlanIcon.setTitle("ma:restaurant.menu", for: .normal)
+        btnMealPlanIcon.parseIcon()
+        btnTransportPlanIcon.setTitle("ma:directions.bus", for: .normal)
+        btnTransportPlanIcon.parseIcon()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -74,6 +82,8 @@ class DirectorAddChild2ViewController: UIViewController {
     
     //MARK: Private Methods
     func initialization(){
+        
+        //Customization
         
     }
 }

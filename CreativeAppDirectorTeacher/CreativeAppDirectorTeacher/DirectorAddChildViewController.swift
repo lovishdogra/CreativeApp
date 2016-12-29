@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftIconFont
 
 class DirectorAddChildViewController: UIViewController {
     
@@ -20,6 +21,9 @@ class DirectorAddChildViewController: UIViewController {
     
         //Buttons
     @IBOutlet weak var btnNext: UIButton!
+    @IBOutlet weak var btnChildCareIcon: UIButton!
+    @IBOutlet weak var btnMealPlanIcon: UIButton!
+    @IBOutlet weak var btnTransportIcon: UIButton!
     
         //Images
     @IBOutlet weak var imageViewChild: UIImageView!
@@ -52,6 +56,16 @@ class DirectorAddChildViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.isNavigationBarHidden = true
+        
+        //Icons
+        btnChildCareIcon.setTitle("ma:child.care", for: .normal)
+        btnChildCareIcon.parseIcon()
+        btnMealPlanIcon.setTitle("ma:restaurant.menu", for: .normal)
+        btnMealPlanIcon.parseIcon()
+        btnTransportIcon.setTitle("ma:directions.bus", for: .normal)
+        btnTransportIcon.parseIcon()
+
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,6 +74,7 @@ class DirectorAddChildViewController: UIViewController {
     
     //MARK: Private Methods
     func initialization(){
+        //Customization
         
     }
 }

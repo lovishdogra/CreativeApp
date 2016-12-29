@@ -27,6 +27,7 @@ class DirectorPaymentViewController: UIViewController {
     
     //Private Methods
     func initailization(){
+        //Customization
         
     }
 }

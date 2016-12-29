@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftIconFont
 
 class DirectorMoveChildViewController: UIViewController {
     
@@ -20,6 +21,7 @@ class DirectorMoveChildViewController: UIViewController {
     @IBOutlet weak var labelCurrentClass: UILabel!
     @IBOutlet weak var labelNewLevel: UILabel!
     @IBOutlet weak var labelNewClass: UILabel!
+    @IBOutlet weak var labelArrow: UILabel!
     
         //Buttons
     @IBOutlet weak var btnCancel: UIButton!
@@ -47,9 +49,16 @@ class DirectorMoveChildViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        //Icons
+        labelArrow.font = UIFont.icon(from: .MaterialIcon, ofSize: 50)
+        labelArrow.text = String.fontMaterialIcon("keyboard.arrow.right")
+    }
     
     //MARK: Private Methods
     func initialization(){
-        
+        //Customization
+        viewMasterContainer.layer.borderWidth = 0.4
+        viewMasterContainer.layer.borderColor = UIColor.lightGray.cgColor
     }
 }

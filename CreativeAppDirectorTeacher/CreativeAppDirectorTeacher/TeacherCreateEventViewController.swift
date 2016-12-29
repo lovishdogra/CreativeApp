@@ -62,6 +62,8 @@ class TeacherCreateEventViewController: UIViewController {
     
     //MARK: Private Methods
     func initialization(){
+        //Customization
+        viewTopbarContainer.clipsToBounds = true
         
     }
 }

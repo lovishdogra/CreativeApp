@@ -53,6 +53,7 @@ class DirectorTrackMilestoneViewController: UIViewController {
     
     //MARK: Private Methods
     func initialization(){
-
+        //Customization
+        viewTopbarContainer.clipsToBounds = true
     }
 }

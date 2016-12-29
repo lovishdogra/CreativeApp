@@ -52,5 +52,8 @@ class TeacherTrackMilestonesViewController: UIViewController {
     //MARK: Private Methods
     func initialization(){
         
+        //Customization
+        viewTopbarContainer.clipsToBounds = true
+        
     }
 }

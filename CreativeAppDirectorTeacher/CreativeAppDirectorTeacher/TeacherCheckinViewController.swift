@@ -49,8 +49,13 @@ class TeacherCheckinViewController : UIViewController {
     
     //MARK: Initial Methods
     func initialization(){
+        
+        //Color
+        viewTopbarContainer.backgroundColor = colorHeaderTopBar
        
+        //Customization
         Utils.setUnderLineOnBasisOfText((btnConfirmCheckin.titleLabel?.text)!, btnConfirmCheckin,UIColor.white)
+        viewTopbarContainer.clipsToBounds = true
         
     }
 }

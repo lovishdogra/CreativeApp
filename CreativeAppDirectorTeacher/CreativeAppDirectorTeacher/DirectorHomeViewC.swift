@@ -161,7 +161,7 @@ class DirectorHomeViewC: UIViewController,UICollectionViewDelegate, UICollection
         labelSelectKids.font = UIFont(name: "Roboto-Regular", size: 18)
 
         
-        btnSelectStandards.backgroundColor = colorTopNavBarBlue
+        //btnSelectStandards.backgroundColor = colorTopNavBarBlue
         btnSelectStandards.setTitle(Utils.returnLocalizedStringForKey("select_standards"), for: .normal)
         btnSelectStandards.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 16)
         btnSelectStandards.setTitleColor(UIColor.white, for: .normal)
@@ -170,15 +170,15 @@ class DirectorHomeViewC: UIViewController,UICollectionViewDelegate, UICollection
         //btnSelectStandards.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         
         btnSelectClass.setTitle("fa:users", for: .normal)
-        btnSelectClass.titleLabel?.textColor = colorTopNavBarBlue
-        btnSelectClass.setTitleColor(colorTopNavBarBlue, for: .normal)
+        //btnSelectClass.titleLabel?.textColor = colorTopNavBarBlue
+        //btnSelectClass.setTitleColor(colorTopNavBarBlue, for: .normal)
         btnSelectClass.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 30)
-        btnSelectClass.backgroundColor = colorGrey
+        btnSelectClass.backgroundColor = colorGray
         btnSelectClass.parseIcon()
         lblSelectClass.text =  Utils.returnLocalizedStringForKey("select_all_class")
         lblSelectClass.textColor = UIColor.black
         lblSelectClass.backgroundColor = UIColor.clear
-        self.collectionViewClassName.backgroundColor = colorGrey
+        self.collectionViewClassName.backgroundColor = colorGray
         
         
         // Setting Up Icons Dummy Data for popolating in colletion view of menuitems
@@ -280,7 +280,7 @@ class DirectorHomeViewC: UIViewController,UICollectionViewDelegate, UICollection
                 lblMenuName.textColor = UIColor.white
                 
             } else {
-                cell?.backgroundColor = colorGrey
+                cell?.backgroundColor = colorGray
                 lblMenuName.textColor = UIColor.black
             }
             
@@ -288,7 +288,7 @@ class DirectorHomeViewC: UIViewController,UICollectionViewDelegate, UICollection
             
         } else {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ClassCell", for: indexPath)
-            cell?.backgroundColor = colorGrey
+            cell?.backgroundColor = colorGray
             
             let imageViewClass = cell?.viewWithTag(1000) as! UIImageView
             let lblClassName = cell?.viewWithTag(2000) as! UILabel

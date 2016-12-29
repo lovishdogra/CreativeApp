@@ -11,6 +11,8 @@ import UIKit
 class TeacherDailyReportViewController: UIViewController {
     
     //MARK: Variables & IBOutlets
+    let imagePicker = UIImagePickerController()
+
     
         //Views
     @IBOutlet weak var ViewMasterContainer: UIView!
@@ -46,16 +48,27 @@ class TeacherDailyReportViewController: UIViewController {
     @IBOutlet weak var imageViewChild: UIImageView!
     
     
-        //Image Picker
-    var imagePicker = UIImagePickerController()
-    
-    
     //MARK: Button Actions
     @IBAction func tapKidsDisplay(_ sender: Any) {
     }
+    
     @IBAction func tapCamera(_ sender: Any) {
+        imagePicker.allowsEditing = true
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            imagePicker.modalPresentationStyle = .fullScreen
+            imagePicker.sourceType = .camera
+            self.present(imagePicker, animated: true, completion: nil)
+        } else {
+            Utils.showAlertViewOnViewController(self, title: "CreativeApp", message: "Camera is not accessible")
+        }
     }
+    
     @IBAction func tapGallery(_ sender: Any) {
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.modalPresentationStyle = .popover
+        self.present(imagePicker, animated: true, completion: nil)
+        imagePicker.popoverPresentationController?.sourceView = btnGallery
     }
     @IBAction func tapAddEntry(_ sender: Any) {
     }
@@ -75,6 +88,9 @@ class TeacherDailyReportViewController: UIViewController {
     func initializers(){
         self.navigationController?.isNavigationBarHidden = true
         imagePicker.delegate = self
+        
+        //Customization
+        viewTopbarContainer.clipsToBounds = true
         
         //Icons
         labelCameraIcon.font = UIFont.icon(from: .MaterialIcon, ofSize: 20)
@@ -96,11 +112,14 @@ class TeacherDailyReportViewController: UIViewController {
 extension TeacherDailyReportViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageViewChild.contentMode = .scaleAspectFit
             imageViewChild.image = pickedImage
         }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
 }

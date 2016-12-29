@@ -38,6 +38,8 @@ class DirectorManageClassViewController: UIViewController,UICollectionViewDelega
     //MARK: Private Methods
     func initailization(){
         
+        //Customization
+        viewTopbarContainer.clipsToBounds = true
         
         /*
          "create_level" = "Manage Level";
@@ -77,8 +79,9 @@ class DirectorManageClassViewController: UIViewController,UICollectionViewDelega
         let btnOptionName = cell.viewWithTag(1000) as! UIButton
         let strNameOfOption = self.arrOfOptions[indexPath.item] as String
         btnOptionName.titleLabel?.textColor = UIColor.white
-        btnOptionName.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 20)
+        btnOptionName.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 16)
         btnOptionName.setTitle(strNameOfOption, for: .normal)
+        Utils.setUnderLineOnBasisOfText(strNameOfOption, btnOptionName, UIColor.white)
         btnOptionName.isUserInteractionEnabled = false
 
         return cell

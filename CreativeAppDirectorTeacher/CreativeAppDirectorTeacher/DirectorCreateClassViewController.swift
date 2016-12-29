@@ -26,6 +26,7 @@ class DirectorCreateClassViewController: UIViewController {
     
     //MARK: Private Methods
     func initialization(){
+        //Customization
         
     }
 }

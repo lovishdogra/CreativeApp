@@ -39,6 +39,7 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
     
     // Array for loading the icons for the menus
     var arrOfManuItems:[Dictionary<String, String>] =  [Dictionary<String, String>]()
+    
     // Array for loading the icons for the menus
     var arrOfAllChildren:[Dictionary<String, String>] =  [Dictionary<String, String>]()
     var arrOfSelectedChildren:[String] =  [String]()
@@ -49,21 +50,20 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
     // Master Teacher ViewControllerObject
     var masterTeacherViewC : MasterTeacherViewC?
     
-        //MARK: Viewlife methods
+    //MARK: Viewlife methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialization()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-    
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
-        initialization()
         
         self.collectionViewMenubar.delegate = self
         self.collectionViewMenubar.dataSource = self
@@ -76,7 +76,7 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
         
         // Setting check controller at the very first time
         self.setNewControllerInBottomSection(index: 0)
-
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -97,7 +97,7 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
             
             //clearing all the stored values from user default
             Singleton.shared.clearUserDefaultStoredValues()
-
+            
             _ = self.navigationController?.popViewController(animated: true)
             alert.dismiss(animated: true, completion: {
                 
@@ -132,29 +132,31 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
         
     }
     
-
+    
     
     //MARK: Private Methods
     func initialization(){
         
         //Keyboard Notification
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TeacherHomeViewC.dismissKeyboard))
-//        view.addGestureRecognizer(tap)
+        //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TeacherHomeViewC.dismissKeyboard))
+        //        view.addGestureRecognizer(tap)
         registerForKeyboardNotifications()
+        
+        //Colors
+        viewTopbarContainer.backgroundColor = colorHeaderTopBar
+        
         
         //Icons
         btnLogout.setTitle("fa:sign-out", for: .normal)
         btnLogout.parseIcon()
         
         btnSelectAll.setTitle("fa:users", for: .normal)
-        btnSelectAll.setTitleColor(colorTopNavBarBlue, for: .normal)
         btnSelectAll.parseIcon()
         
         // Class Image
         let url = URL(string: "http://orig09.deviantart.net/9bee/f/2011/287/1/e/red_pyro_class_icon_by_slithbane-d4cv0b0.png")!
         
         self.imageViewLogo.setImageWith(url, placeholderImage: UIImage(named: "deer smile"))
-        
         
         // Setting Up Icons Dummy Data for popolating in colletion view of menuitems
         let dict1 = ["menuName":"Check In","menuIcon":"http://orig09.deviantart.net/9bee/f/2011/287/1/e/red_pyro_class_icon_by_slithbane-d4cv0b0.png"];
@@ -236,7 +238,7 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
         
     }
     
-
+    
     
     //MARK: - UICollectionview Delegate And Datasource Methods
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -261,7 +263,7 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
             let imageView = cell?.viewWithTag(1000) as! UIImageView
             let lblMenuName = cell?.viewWithTag(2000) as! UILabel
             lblMenuName.font = UIFont(name: "Roboto-Medium", size: 16)
-
+            
             let dict = self.arrOfManuItems[indexPath.row]
             let strMenuName = dict["menuName"]
             let strMenuIcon = dict["menuIcon"]
@@ -278,14 +280,14 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
             imageView.clipsToBounds = true
             
             
-
+            
             
             if indexPath.row == selectedMenuIndex {
                 cell?.backgroundColor = colorBlue
                 lblMenuName.textColor = UIColor.white
                 
             } else {
-                cell?.backgroundColor = colorGrey
+                cell?.backgroundColor = colorGray
                 lblMenuName.textColor = UIColor.black
             }
             cell?.layer.cornerRadius = 4.0
@@ -365,14 +367,14 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if collectionView == self.collectionViewMenubar {
-        let width = collectionView.frame.size.width - CGFloat(((self.arrOfManuItems.count + 2) * 10))
-        let height = collectionView.frame.size.height
-        
-        let widhtOfCell = ((width) / CGFloat (self.arrOfManuItems.count))
-        return CGSize(width: widhtOfCell, height: height)
+            let width = collectionView.frame.size.width - CGFloat(((self.arrOfManuItems.count + 2) * 10))
+            let height = collectionView.frame.size.height
+            
+            let widhtOfCell = ((width) / CGFloat (self.arrOfManuItems.count))
+            return CGSize(width: widhtOfCell, height: height)
         } else {
             return CGSize(width: 90.0 , height: 90.0)
-
+            
         }
     }
     

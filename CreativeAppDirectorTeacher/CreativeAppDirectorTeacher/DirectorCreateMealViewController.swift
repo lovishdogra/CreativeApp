@@ -46,6 +46,7 @@ class DirectorCreateMealViewController: UIViewController {
     
     //MARK: Private Methods
     func initialization() {
+        //Customization
         
     }
 }
