@@ -24,7 +24,7 @@ class Utils: NSObject {
         if let unwarpDetailsMessage = detailMessage {
             self.hud!.detailsLabel.text = unwarpDetailsMessage
         }
-      //  print("hud\(hud)")
+        //  print("hud\(hud)")
         self.hud!.show(animated: true)
     }
     
@@ -64,7 +64,7 @@ class Utils: NSObject {
     
     //MARK: Phone Number Validation
     class func isValidPhone(_ value: String) -> Bool {
-       // let PHONE_REGEX = "^\\+\\d{3}-\\d{2}-\\d{7}$"
+        // let PHONE_REGEX = "^\\+\\d{3}-\\d{2}-\\d{7}$"
         let PHONE_REGEX = "^[2-9]{2}[0-9]{8}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
         let result =  phoneTest.evaluate(with: value)
@@ -73,7 +73,7 @@ class Utils: NSObject {
     
     //MARK: AlertView without button
     class func showAlertViewOnViewController(_ viewC : UIViewController,title: String, message: String){
-    
+        
         let alert : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         let okAction : UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default) { (action: UIAlertAction) -> Void in
             alert.dismiss(animated: true, completion: { () -> Void in
@@ -85,14 +85,14 @@ class Utils: NSObject {
         }
     }
     
-    
+    //MARK: Alert With buttons
     class func showOkCancelAlertViewOnViewController(_ viewC : UIViewController,title: String, message: String, okClickResult: @escaping (_ index: Int,_ action: UIAlertController)->(),cancelClickResult: @escaping (_ index:Int, _ action: UIAlertController)->()){
         
         let alert : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         
         let okAction : UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default) { (action: UIAlertAction) -> Void in
             okClickResult(0,alert)
-
+            
         }
         
         let cancelAction : UIAlertAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default) { (action: UIAlertAction) -> Void in
@@ -101,20 +101,17 @@ class Utils: NSObject {
         
         alert.addAction(okAction)
         alert.addAction(cancelAction)
-
+        
         viewC.present(alert, animated: true) { () -> Void in
         }
     }
     
-    
-    
     //MARK: CreateTopStatusBar
     class func createTopStatusBarOnView(_ view:UIView) -> UIView {
-    let statusBarView  = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 20))
-    statusBarView.backgroundColor = UIColor.black
-    statusBarView.alpha = 0.9
-    return statusBarView
-        
+        let statusBarView  = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 20))
+        statusBarView.backgroundColor = UIColor.black
+        statusBarView.alpha = 0.9
+        return statusBarView
     }
     
     //MARK: Localized Strings
@@ -123,8 +120,43 @@ class Utils: NSObject {
         return str
     }
     
-   
+    //MARK: String Underline
+    class func setUnderLineOnBasisOfText(_ passedString : String, _ view : UIView?, _ color : UIColor) {
     
-      
+        
+        let attributedString = NSAttributedString(string: passedString, attributes: [NSUnderlineStyleAttributeName:1,NSForegroundColorAttributeName:color])
+        
+        if view is UILabel {
+           let lable = view as! UILabel
+           lable.attributedText = attributedString
+        }
+        
+        if view is UIButton {
+        let btn = view  as! UIButton
+            btn.setAttributedTitle(attributedString, for: .normal)
+        }
+    }
+    
+    
+    class func setUnderLineOnBasisOfView(_ view : UIView?, _ color : UIColor) {
+        
+        if view is UILabel {
+            let lable = view as! UILabel
+            let lineView = UIView(frame: CGRect(x: 0, y: lable.frame.size.height, width: lable.frame.size.width, height: 2))
+            lineView.backgroundColor = color
+            lable.addSubview(lineView)
+            
+        }
+        
+        if view is UIButton {
+            let btn = view  as! UIButton
+            let lineView = UIView(frame: CGRect(x: 0, y: btn.frame.size.height, width: btn.frame.size.width, height: 2))
+            lineView.backgroundColor = color
+            btn.addSubview(lineView)
+        }
+    }
+
+    
+    
     
 }

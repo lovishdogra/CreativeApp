@@ -11,6 +11,9 @@ import UIKit
 class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     //MARK: Declaration & IBOutlets
+    
+    var activeField : UITextField?
+    
     //Views
     @IBOutlet weak var viewTopMasterContainer: UIView!
     @IBOutlet weak var viewTopbarContainer: UIView!
@@ -18,6 +21,7 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
     @IBOutlet weak var viewSubClassLogoContainer: UIView!
     @IBOutlet weak var collectionViewStudentsList: UICollectionView!
     @IBOutlet weak var viewContainerView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     //Buttons
     @IBOutlet weak var btnLogout: UIButton!
@@ -132,6 +136,11 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
     
     //MARK: Private Methods
     func initialization(){
+        
+        //Keyboard Notification
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TeacherHomeViewC.dismissKeyboard))
+//        view.addGestureRecognizer(tap)
+        registerForKeyboardNotifications()
         
         //Icons
         btnLogout.setTitle("fa:sign-out", for: .normal)
@@ -251,7 +260,7 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath)
             let imageView = cell?.viewWithTag(1000) as! UIImageView
             let lblMenuName = cell?.viewWithTag(2000) as! UILabel
-            lblMenuName.font = UIFont(name: "Roboto-Bold", size: 16)
+            lblMenuName.font = UIFont(name: "Roboto-Medium", size: 16)
 
             let dict = self.arrOfManuItems[indexPath.row]
             let strMenuName = dict["menuName"]
@@ -264,7 +273,7 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
             imageView.clipsToBounds = true
             imageView.setImageWith(url!, placeholderImage: UIImage(named: "deer smile"))
             imageView.translatesAutoresizingMaskIntoConstraints = true;
-            imageView.frame = CGRect(x: ((cell?.frame.size.width)! / 2) - (imageView.frame.size.width / 2), y: 10, width: imageView.frame.size.width, height: imageView.frame.size.width)
+            imageView.frame = CGRect(x: ((cell?.frame.size.width)! / 2) - (imageView.frame.size.width / 2), y: 10, width:imageView.frame.size.width, height: imageView.frame.size.width)
             imageView.layer.cornerRadius = imageView.frame.size.height / 2
             imageView.clipsToBounds = true
             
@@ -293,7 +302,7 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
             btnSelected.isUserInteractionEnabled = false
             btnSelected.backgroundColor = UIColor.clear
             
-            btnSelected.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 20)
+            btnSelected.titleLabel?.font = UIFont(name: "Roboto-Medium", size: 16)
             
             let dict = self.arrOfAllChildren[indexPath.row]
             let strMenuName = dict["childName"]
@@ -374,8 +383,62 @@ class TeacherHomeViewC: UIViewController, UICollectionViewDelegate,UICollectionV
         return 10.0
     }
     
+}
+
+//MARK: Keyboard Activity Extension
+extension TeacherHomeViewC {
+    //KeyBoard Dismissal Function
+    func registerForKeyboardNotifications(){
+        //Adding notifies on keyboard appearing
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
     
+    func deregisterFromKeyboardNotifications(){
+        //Removing notifies on keyboard appearing
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
     
+    func keyboardWasShown(notification: NSNotification){
+        //Need to calculate keyboard exact size due to Apple suggestions
+        self.scrollView.isScrollEnabled = true
+        var info = notification.userInfo!
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize!.height, 0.0)
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
+        var aRect : CGRect = self.view.frame
+        aRect.size.height -= keyboardSize!.height
+        if let activeField = self.activeField {
+            if (!aRect.contains(activeField.frame.origin)){
+                self.scrollView.scrollRectToVisible(activeField.frame, animated: true)
+            }
+        }
+    }
+    
+    func keyboardWillBeHidden(notification: NSNotification) {
+        //Once keyboard disappears, restore original positions
+        var info = notification.userInfo!
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, -keyboardSize!.height, 0.0)
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
+        self.view.endEditing(true)
+        self.scrollView.isScrollEnabled = false
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField){
+        activeField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField){
+        activeField = nil
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
 

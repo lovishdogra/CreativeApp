@@ -12,6 +12,9 @@ import SwiftIconFont
 class DirectorHomeViewC: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     //MARK: Declaration & IBOutlets
+    
+    var activeField : UITextField?
+    
         //Views
     @IBOutlet weak var viewTopMasterContainer: UIView!
     @IBOutlet weak var viewTopbarContainer: UIView!
@@ -19,6 +22,7 @@ class DirectorHomeViewC: UIViewController,UICollectionViewDelegate, UICollection
     @IBOutlet weak var collectionViewClassName: UICollectionView!
     @IBOutlet weak var viewContainerView: UIView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
         //Buttons
     @IBOutlet weak var btnLogout: UIButton!
     @IBOutlet weak var btnSelectKids: UIButton!
@@ -136,6 +140,11 @@ class DirectorHomeViewC: UIViewController,UICollectionViewDelegate, UICollection
     func initialization(){
         
         self.collectionViewMenu.backgroundColor = UIColor.white
+        
+        //Keyboard Notification
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DirectorHomeViewC.dismissKeyboard))
+//        view.addGestureRecognizer(tap)
+        registerForKeyboardNotifications()
 
         //Icons
         btnLogout.setTitle("fa:sign-out", for: .normal)
@@ -419,6 +428,62 @@ class DirectorHomeViewC: UIViewController,UICollectionViewDelegate, UICollection
     }
     
     
+}
+
+//MARK: Keyboard Action Extension
+extension DirectorHomeViewC {
+    //KeyBoard Dismissal Function
+    func registerForKeyboardNotifications(){
+        //Adding notifies on keyboard appearing
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func deregisterFromKeyboardNotifications(){
+        //Removing notifies on keyboard appearing
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func keyboardWasShown(notification: NSNotification){
+        //Need to calculate keyboard exact size due to Apple suggestions
+        self.scrollView.isScrollEnabled = true
+        var info = notification.userInfo!
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize!.height, 0.0)
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
+        var aRect : CGRect = self.view.frame
+        aRect.size.height -= keyboardSize!.height
+        if let activeField = self.activeField {
+            if (!aRect.contains(activeField.frame.origin)){
+                self.scrollView.scrollRectToVisible(activeField.frame, animated: true)
+            }
+        }
+    }
+    
+    func keyboardWillBeHidden(notification: NSNotification) {
+        //Once keyboard disappears, restore original positions
+        var info = notification.userInfo!
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, -keyboardSize!.height, 0.0)
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
+        self.view.endEditing(true)
+        self.scrollView.isScrollEnabled = false
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField){
+        activeField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField){
+        activeField = nil
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
 

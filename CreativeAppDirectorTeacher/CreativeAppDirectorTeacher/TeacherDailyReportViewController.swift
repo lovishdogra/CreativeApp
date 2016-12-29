@@ -75,6 +75,19 @@ class TeacherDailyReportViewController: UIViewController {
     func initializers(){
         self.navigationController?.isNavigationBarHidden = true
         imagePicker.delegate = self
+        
+        //Icons
+        labelCameraIcon.font = UIFont.icon(from: .MaterialIcon, ofSize: 20)
+        labelCameraIcon.text = String.fontMaterialIcon("photo.camera")
+        
+        labelGalleryIcon.font = UIFont.icon(from: .MaterialIcon, ofSize: 20)
+        labelGalleryIcon.text = String.fontMaterialIcon("photo.library")
+        
+        //View Border
+        viewScrollUpper.layer.borderWidth = 0.4
+        viewScrollUpper.layer.borderColor = UIColor.lightGray.cgColor
+        viewScrollBottom.layer.borderWidth = 0.4
+        viewScrollBottom.layer.borderColor = UIColor.lightGray.cgColor
     }
 }
 

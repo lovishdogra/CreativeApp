@@ -20,6 +20,7 @@ let LANGUAGE = "language"
 
 // Userdefault keys and values
 let userDef = UserDefaults.standard
+
 // Keys
 let kKeyUserType            = "userType"
 let kKeyUserId              = "userId"

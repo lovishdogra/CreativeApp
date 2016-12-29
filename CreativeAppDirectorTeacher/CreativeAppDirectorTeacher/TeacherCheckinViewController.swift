@@ -28,16 +28,9 @@ class TeacherCheckinViewController : UIViewController {
     
     //MARK: IBActions of Buttons
     @IBAction func tapConfirmCheckin(_ sender: Any) {
-    }
-    
-    @IBAction func tapConfirmCheckIn(_ sender: Any) {
         Utils.showAlertViewOnViewController(self, title: "CreativeApp", message: Utils.returnLocalizedStringForKey("message_confirm_checkin"))
     }
-    
-    
-    @IBAction func tapLogout(_ sender: Any) {
-        Utils.showAlertViewOnViewController(self, title: "CreativeApp" , message: Utils.returnLocalizedStringForKey("message_confirm_logout"))
-    }
+
     @IBAction func tapKidDisplay(_ sender: Any) {
     }
     
@@ -57,6 +50,7 @@ class TeacherCheckinViewController : UIViewController {
     //MARK: Initial Methods
     func initialization(){
        
+        Utils.setUnderLineOnBasisOfText((btnConfirmCheckin.titleLabel?.text)!, btnConfirmCheckin,UIColor.white)
         
     }
 }
