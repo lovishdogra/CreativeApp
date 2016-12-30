@@ -52,6 +52,9 @@ class TeacherTrackMilestonesViewController: UIViewController {
     //MARK: Private Methods
     func initialization(){
         
+        //Colors
+        viewTopbarContainer.backgroundColor = colorHeaderTopBar
+        
         //Customization
         viewTopbarContainer.clipsToBounds = true
         

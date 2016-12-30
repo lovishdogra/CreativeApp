@@ -89,6 +89,8 @@ class TeacherDailyReportViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         imagePicker.delegate = self
         
+        viewTopbarContainer.backgroundColor = colorHeaderTopBar
+        
         //Customization
         viewTopbarContainer.clipsToBounds = true
         
@@ -100,10 +102,16 @@ class TeacherDailyReportViewController: UIViewController {
         labelGalleryIcon.text = String.fontMaterialIcon("photo.library")
         
         //View Border
-        viewScrollUpper.layer.borderWidth = 0.4
+        viewScrollUpper.layer.borderWidth = 0.5
         viewScrollUpper.layer.borderColor = UIColor.lightGray.cgColor
-        viewScrollBottom.layer.borderWidth = 0.4
+        viewScrollBottom.layer.borderWidth = 0.5
         viewScrollBottom.layer.borderColor = UIColor.lightGray.cgColor
+        viewScrollUpper.layer.borderWidth = 0.5
+        viewScrollUpper.layer.borderColor = UIColor.lightGray.cgColor
+        viewScrollBottom.layer.borderWidth = 0.5
+        viewScrollBottom.layer.borderColor = UIColor.lightGray.cgColor
+        tableView.layer.borderWidth = 0.5
+        tableView.layer.borderColor = UIColor.lightGray.cgColor
     }
 }
 
@@ -112,9 +120,12 @@ class TeacherDailyReportViewController: UIViewController {
 extension TeacherDailyReportViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageViewChild.contentMode = .scaleAspectFit
-            imageViewChild.image = pickedImage
+        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            OperationQueue.main.addOperation {
+                self.imageViewChild.contentMode = .scaleAspectFit
+                self.imageViewChild.image = pickedImage
+            }
+            picker.dismiss(animated: true, completion: nil)
         }
     }
     

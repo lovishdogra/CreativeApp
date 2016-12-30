@@ -59,3 +59,53 @@ class TeacherCheckinViewController : UIViewController {
         
     }
 }
+
+extension TeacherCheckinViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->UICollectionViewCell{
+        
+        let collectionCell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "ChildrenDetailCell", for: indexPath) as! CheckInCollectionViewCell
+        let dummyImage = UIImage(named:"login_below_image")
+        collectionCell.imageViewChild.image = dummyImage
+        collectionCell.labelChildName.text = "yoyo honey singh"
+        collectionCell.switchChildSelection.isOn = false
+
+        return collectionCell
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
