@@ -49,6 +49,13 @@ class TeacherCreateEventViewController: UIViewController {
     @IBAction func tapIC(_ sender: Any) {
     }
     @IBAction func tapAddEntry(_ sender: Any) {
+        
+        Utils.showOkCancelAlertViewOnViewController(self, title: "CreativeApp", message: "Do really want add the Entries", okClickResult: { (index, alert) in
+            alert.dismiss(animated: true, completion: nil)
+            Utils.showToastMesaage(self.viewMasterContainer, message: "Entry added successfully", delay: 1)
+        }) { (index, alert) in
+            alert.dismiss(animated: true, completion: nil)
+        }
     }
     
     //MARK:ViewLife Methods
@@ -62,6 +69,10 @@ class TeacherCreateEventViewController: UIViewController {
     
     //MARK: Private Methods
     func initialization(){
+        
+        //Colors
+        viewTopbarContainer.backgroundColor = colorHeaderTopBar
+
         //Customization
         viewTopbarContainer.clipsToBounds = true
         

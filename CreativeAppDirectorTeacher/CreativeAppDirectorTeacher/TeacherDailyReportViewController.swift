@@ -67,8 +67,13 @@ class TeacherDailyReportViewController: UIViewController {
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
         imagePicker.modalPresentationStyle = .popover
-        self.present(imagePicker, animated: true, completion: nil)
+        
         imagePicker.popoverPresentationController?.sourceView = btnGallery
+        imagePicker.popoverPresentationController?.sourceRect = btnGallery.bounds
+        
+        
+        self.present(imagePicker, animated: true, completion: nil)
+        
     }
     @IBAction func tapAddEntry(_ sender: Any) {
     }
