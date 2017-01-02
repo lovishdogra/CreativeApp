@@ -90,14 +90,7 @@ class WebConnection: NSObject {
                 
                 } as! (Data?, URLResponse?, Error?) -> Void).resume();
         }
-        
-        
-        
     }
-    
-    
-    
-    
     
     func callWebServiceWithUrl(_ urlString:String,
                                time : TimeInterval,
@@ -179,10 +172,6 @@ class WebConnection: NSObject {
                 }
                 
             }).resume()
-            
-            
-          
-            
         }
     }
     
@@ -323,10 +312,23 @@ class WebConnection: NSObject {
         
         
     }
-    
-
-    
-    
-    
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

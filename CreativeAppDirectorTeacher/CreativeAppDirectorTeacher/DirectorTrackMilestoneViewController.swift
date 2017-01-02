@@ -53,7 +53,25 @@ class DirectorTrackMilestoneViewController: UIViewController {
     
     //MARK: Private Methods
     func initialization(){
+        
         //Customization
         viewTopbarContainer.clipsToBounds = true
+        Utils.setUnderLineOnBasisOfText((btnAddEvaluation.titleLabel?.text)!, btnAddEvaluation, UIColor.white)
+        Utils.setUnderLineOnBasisOfText((btnSaveEvaluation.titleLabel?.text)!, btnSaveEvaluation, UIColor.white)
+        
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

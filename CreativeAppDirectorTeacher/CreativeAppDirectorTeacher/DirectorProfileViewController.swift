@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import SwiftIconFont
 
 class DirectorProfileViewController: UIViewController {
     
     //MARK: Declaration & IBOutlets
-        //Views
+    
+    var imagePicker = UIImagePickerController()
+    
+    //Views
     @IBOutlet weak var viewMasterContainer: UIView!
     @IBOutlet weak var viewTopbarContainer: UIView!
     @IBOutlet weak var viewBottomContainer: UIView!
@@ -21,17 +25,13 @@ class DirectorProfileViewController: UIViewController {
     
     
     
-        //Images
+    //Images
     @IBOutlet weak var imageViewKidimage: UIImageView!
-    @IBOutlet weak var imageViewChildCareIcon: UIImageView!
-    @IBOutlet weak var imageViewMealPlanIcon: UIImageView!
-    @IBOutlet weak var imageViewTransportIcon: UIImageView!
     @IBOutlet weak var imageViewMom: UIImageView!
     @IBOutlet weak var imageViewDad: UIImageView!
     @IBOutlet weak var imageSplNoteIcon: UIImageView!
     
-    
-        //Labels
+    //Labels
     @IBOutlet weak var labelSelectedKids: UILabel!
     @IBOutlet weak var labelClassName: UILabel!
     @IBOutlet weak var labelKidName: UILabel!
@@ -51,18 +51,49 @@ class DirectorProfileViewController: UIViewController {
     @IBOutlet weak var labelOtherGuardian: UILabel!
     @IBOutlet weak var labelSplNotes: UILabel!
     
-        //Buttons
+    //Buttons
     @IBOutlet weak var btnChooseKidImage: UIButton!
+    @IBOutlet weak var btnChildCareIcon: UIButton!
+    @IBOutlet weak var btnMealIcon: UIButton!
+    @IBOutlet weak var btnTransportIcon: UIButton!
     
-    
-        //Texts
+    //Texts
     @IBOutlet weak var textViewSplNotes: UITextView!
-    
-    
     
     //MARK: IBActions
     
     @IBAction func tapChooseKidImage(_ sender: Any) {
+        let actionSheet = UIAlertController(title: "CreativeApp", message: "Choose Image Source", preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {(alert) in
+            self.imagePicker.allowsEditing = true
+            self.imagePicker.sourceType = .photoLibrary
+            self.imagePicker.modalPresentationStyle = .popover
+            
+            self.imagePicker.popoverPresentationController?.sourceView = self.btnChooseKidImage
+            self.imagePicker.popoverPresentationController?.sourceRect = self.btnChooseKidImage.bounds
+            
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(alert) in
+            self.imagePicker.allowsEditing = true
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                self.imagePicker.modalPresentationStyle = .fullScreen
+                self.imagePicker.sourceType = .camera
+                
+                self.present(self.imagePicker, animated: true, completion: nil)
+            } else {
+                Utils.showAlertViewOnViewController(self, title: "CreativeApp", message: "Camera Not Accessible")
+            }
+        }))
+        
+        if let presenter = actionSheet.popoverPresentationController {
+            presenter.sourceView = btnChooseKidImage
+            presenter.sourceRect = btnChooseKidImage.bounds
+        }
+        
+        self.present(actionSheet, animated: true, completion: nil)
     }
     
     
@@ -77,11 +108,47 @@ class DirectorProfileViewController: UIViewController {
     
     //MARK: Private Methods
     func initialization() {
+        
+        //Icons
+        btnChooseKidImage.setTitle("ma:photo.camera", for: .normal)
+        btnChooseKidImage.parseIcon()
+        btnChildCareIcon.setTitle("ma:child.care", for: .normal)
+        btnChildCareIcon.parseIcon()
+        btnMealIcon.setTitle("ma:restaurant.menu", for: .normal)
+        btnMealIcon.parseIcon()
+        btnTransportIcon.setTitle("ma:directions.bus", for: .normal)
+        btnTransportIcon.parseIcon()
+        
+        
         //Customization
         viewTopbarContainer.clipsToBounds = true
+        
+        self.viewBottomLeftContainer.layer.borderWidth = 0.4
+        self.viewBottomLeftContainer.layer.borderColor = UIColor.lightGray.cgColor
+        self.viewBottomRightContainer.layer.borderWidth = 0.4
+        self.viewBottomRightContainer.layer.borderColor = UIColor.lightGray.cgColor
+        self.textViewSplNotes.layer.borderWidth = 0.2
+        self.textViewSplNotes.layer.borderColor = UIColor.lightGray.cgColor
     }
 }
 
+//MARK: ImagePicker Extension
+extension DirectorProfileViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            OperationQueue.main.addOperation {
+                self.imageViewKidimage.contentMode = .scaleAspectFit
+                self.imageViewKidimage.image = pickedImage
+            }
+            picker.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
 
 
 

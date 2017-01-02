@@ -169,8 +169,8 @@ class DirectorHomeViewC: UIViewController,UICollectionViewDelegate, UICollection
         //btnSelectStandards.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         
         btnSelectClass.setTitle("fa:users", for: .normal)
-        //btnSelectClass.titleLabel?.textColor = colorTopNavBarBlue
-        //btnSelectClass.setTitleColor(colorTopNavBarBlue, for: .normal)
+        btnSelectClass.titleLabel?.textColor = colorHeaderTopBar
+        btnSelectClass.setTitleColor(colorHeaderTopBar, for: .normal)
         btnSelectClass.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 30)
         btnSelectClass.backgroundColor = colorGray
         btnSelectClass.parseIcon()

@@ -8,7 +8,7 @@ target 'CreativeAppDirectorTeacher' do
     pod 'AFNetworking'
     pod 'Reachability'
     pod 'MBProgressHUD'
-    pod 'CVCalendar'
+    pod 'JTCalendar'
     #pod "CalendarView"
     #pod 'ionicons'
     #pod 'FontAwesomeKit'

@@ -7,18 +7,19 @@
 //
 
 import UIKit
+import SwiftIconFont
 
 class DirectorTrackPaymentViewController: UIViewController {
     
     //MARK: Declaration & IBOutlets
+    
+    
         //Views
     @IBOutlet weak var viewMasterContainer: UIView!
     @IBOutlet weak var viewTopbarContainer: UIView!
     @IBOutlet weak var viewBottomContainer: UIView!
     @IBOutlet weak var viewLeftContainer: UIView!
     @IBOutlet weak var tableView: UITableView!
-    
-    
     
         //Lables
     
@@ -37,15 +38,13 @@ class DirectorTrackPaymentViewController: UIViewController {
     
         //Buttons
     @IBOutlet weak var btnAddPayment: UIButton!
-    
-    
+    @IBOutlet weak var btnLevelIcon: UIButton!
+    @IBOutlet weak var btnChildCareIcon: UIButton!
+    @IBOutlet weak var btnMealIcon: UIButton!
+    @IBOutlet weak var btnTransportIcon: UIButton!
     
         //Images
     @IBOutlet weak var imageViewChildPhoto: UIImageView!
-    @IBOutlet weak var imageViewLevelIcon: UIImageView!
-    @IBOutlet weak var imageViewChildCareicon: UIImageView!
-    @IBOutlet weak var imageViewMealPlanIcon: UIImageView!
-    @IBOutlet weak var imageViewTransportIcon: UIImageView!
     
     
     //MARK: IBActions
@@ -65,7 +64,52 @@ class DirectorTrackPaymentViewController: UIViewController {
     
     //MARK: Private Methods
     func initialization(){
+        
+        //Icons
+        btnLevelIcon.setTitle("ma:class", for: .normal)
+        btnLevelIcon.parseIcon()
+        btnChildCareIcon.setTitle("ma:child.care", for: .normal)
+        btnChildCareIcon.parseIcon()
+        btnMealIcon.setTitle("ma:restaurant.menu", for: .normal)
+        btnMealIcon.parseIcon()
+        btnTransportIcon.setTitle("ma:directions.bus", for: .normal)
+        btnTransportIcon.parseIcon()
+        
         //Customization
         viewTopbarContainer.clipsToBounds = true
+        
+        Utils.setUnderLineOnBasisOfText((btnAddPayment.titleLabel?.text)!, btnAddPayment, UIColor.white)
+        
+        self.viewLeftContainer.layer.borderWidth = 0.4
+        self.viewLeftContainer.layer.borderColor = UIColor.lightGray.cgColor
+        self.tableView.layer.borderWidth = 0.4
+        self.tableView.layer.borderColor = UIColor.lightGray.cgColor
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

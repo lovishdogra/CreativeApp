@@ -63,7 +63,45 @@ class DirectorCreateEventViewController: UIViewController {
     
     //MARK: Private Methods
     func initialization(){
+        
         //Customization
         viewTopbarContainer.clipsToBounds = true
+        
+        self.viewInnerScrollContainer.layer.borderWidth = 0.4
+        self.viewInnerScrollContainer.layer.borderColor = UIColor.lightGray.cgColor
+        
+        self.tableView.layer.borderWidth = 0.4
+        self.tableView.layer.borderColor = UIColor.lightGray.cgColor
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

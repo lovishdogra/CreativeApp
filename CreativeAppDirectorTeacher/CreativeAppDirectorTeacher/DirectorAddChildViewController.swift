@@ -76,5 +76,35 @@ class DirectorAddChildViewController: UIViewController {
     func initialization(){
         //Customization
         
+        self.viewMasterContainer.layer.borderWidth = 0.4
+        self.viewMasterContainer.layer.borderColor = UIColor.lightGray.cgColor
+        
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
