@@ -44,6 +44,7 @@ class TeacherCreateChildPhotoViewController: UIViewController {
         }
     }
     @IBAction func tapSendPhotos(_ sender: Any) {
+        
     }
     
     

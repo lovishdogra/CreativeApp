@@ -140,16 +140,15 @@ class DirectorHomeViewC: UIViewController,UICollectionViewDelegate, UICollection
     func initialization(){
         
         self.collectionViewMenu.backgroundColor = UIColor.white
-        
-        //Keyboard Notification
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DirectorHomeViewC.dismissKeyboard))
-//        view.addGestureRecognizer(tap)
+
         registerForKeyboardNotifications()
+        
+        //Customization
 
         //Icons
         btnLogout.setTitle("fa:sign-out", for: .normal)
         btnLogout.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 20)
-
+        btnLogout.titleLabel?.textColor = UIColor.white
         btnLogout.parseIcon()
         
         btnSelectKids.setTitle("fa:users", for: .normal)
