@@ -27,6 +27,8 @@
 		2197281A1E07E1FB004640B1 /* DirectorPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219728191E07E1FB004640B1 /* DirectorPaymentViewController.swift */; };
 		2197281C1E07E211004640B1 /* DirectorMilestoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2197281B1E07E211004640B1 /* DirectorMilestoneViewController.swift */; };
 		2197281E1E07E292004640B1 /* DirectorCreateMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2197281D1E07E292004640B1 /* DirectorCreateMealViewController.swift */; };
+		21C3B11E1E1B8CCF00D73DF7 /* TeacherGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C3B11D1E1B8CCF00D73DF7 /* TeacherGalleryCollectionViewCell.swift */; };
+		21C3B1201E1B971900D73DF7 /* BigImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C3B11F1E1B971900D73DF7 /* BigImageGalleryViewController.swift */; };
 		21E152681E0BA42E00388DE3 /* DirectorAddChild2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E152671E0BA42E00388DE3 /* DirectorAddChild2ViewController.swift */; };
 		21FA1B051DFE0B130073AD87 /* TeacherCreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA1B041DFE0B130073AD87 /* TeacherCreateEventViewController.swift */; };
 		21FA1B071DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FA1B061DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift */; };
@@ -80,6 +82,8 @@
 		219728191E07E1FB004640B1 /* DirectorPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorPaymentViewController.swift; sourceTree = "<group>"; };
 		2197281B1E07E211004640B1 /* DirectorMilestoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorMilestoneViewController.swift; sourceTree = "<group>"; };
 		2197281D1E07E292004640B1 /* DirectorCreateMealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorCreateMealViewController.swift; sourceTree = "<group>"; };
+		21C3B11D1E1B8CCF00D73DF7 /* TeacherGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		21C3B11F1E1B971900D73DF7 /* BigImageGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigImageGalleryViewController.swift; sourceTree = "<group>"; };
 		21E152671E0BA42E00388DE3 /* DirectorAddChild2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorAddChild2ViewController.swift; sourceTree = "<group>"; };
 		21FA1B041DFE0B130073AD87 /* TeacherCreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherCreateEventViewController.swift; sourceTree = "<group>"; };
 		21FA1B061DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherCreateChildPhotoViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 				211DF5901E16719700BD39FD /* DailyReportTableViewCell.swift */,
 				211DF5921E16731500BD39FD /* CreateEventTableViewCell.swift */,
 				211DF5941E1676CE00BD39FD /* CheckInCollectionViewCell.swift */,
+				21C3B11D1E1B8CCF00D73DF7 /* TeacherGalleryCollectionViewCell.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				21FA1B081DFE15360073AD87 /* TeacherTrackMilestonesViewController.swift */,
 				21FA1B041DFE0B130073AD87 /* TeacherCreateEventViewController.swift */,
 				21FA1B061DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift */,
+				21C3B11F1E1B971900D73DF7 /* BigImageGalleryViewController.swift */,
 				21FA1B0A1DFE16FE0073AD87 /* TeacherProfileViewController.swift */,
 				210CEB711DFFDFA8001A4A2A /* DirectorCheckinViewController.swift */,
 				210CEB6D1DFFBAF7001A4A2A /* DirectorCreateDailyReportViewController.swift */,
@@ -418,6 +424,7 @@
 				51AA1B241E0E4F4600211430 /* EmptySegue.swift in Sources */,
 				219728121E07E135004640B1 /* DirectorCreateLevelViewController.swift in Sources */,
 				210CEB6C1DFFBA1C001A4A2A /* DirectorChildPhotoViewController.swift in Sources */,
+				21C3B1201E1B971900D73DF7 /* BigImageGalleryViewController.swift in Sources */,
 				517419DE1E10E6AD00AF3CB4 /* MasterDirectorManageViewC.swift in Sources */,
 				2197280C1E07C499004640B1 /* DirectorCreateEventViewController.swift in Sources */,
 				219728101E07CF27004640B1 /* DirectorManageClassViewController.swift in Sources */,
@@ -449,6 +456,7 @@
 				211DF5911E16719700BD39FD /* DailyReportTableViewCell.swift in Sources */,
 				51AA1B2A1E0E571600211430 /* DirectorAddChildNavC.swift in Sources */,
 				212976D81DFA836E00097A77 /* TeacherDailyReportViewController.swift in Sources */,
+				21C3B11E1E1B8CCF00D73DF7 /* TeacherGalleryCollectionViewCell.swift in Sources */,
 				51AA1B221E0E4DBD00211430 /* TeacherHomeViewC.swift in Sources */,
 				211DF5951E1676CE00BD39FD /* CheckInCollectionViewCell.swift in Sources */,
 				21FA1B071DFE0FF80073AD87 /* TeacherCreateChildPhotoViewController.swift in Sources */,

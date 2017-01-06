@@ -13,7 +13,6 @@ import Reachability
 
 class WebConnection: NSObject {
     
-    
     // Singleton Object Creation
     static let sharedInstance : WebConnection = {
         let instance = WebConnection()
